@@ -3,15 +3,15 @@ using Common;
 
 namespace BusinessRules {
     public class NumberChecker : INumberChecker {
-        private readonly int CorrectNumber;
+        private readonly int _correctNumber;
 
-        public NumberChecker(int correctNumber) => CorrectNumber = correctNumber;
+        public NumberChecker(int correctNumber) => _correctNumber = correctNumber;
 
-        public NumberChecker() => CorrectNumber = Resources.CorrectNumber;
+        public NumberChecker() => _correctNumber = Resources.CorrectNumber;
 
         public string CheckNumber(int number) {
             NumberValidator.ValidateNumber(number);
-            var comparisonResult = number.CompareTo(CorrectNumber);
+            var comparisonResult = number.CompareTo(_correctNumber);
             switch (comparisonResult) {
                 case -1:
                     return Resources.TooLowMessage;

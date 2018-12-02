@@ -5,50 +5,50 @@ using NUnit.Framework;
 
 namespace BusinessRules.UnitTests {
     public class NumberCheckerTests {
-        private static readonly INumberChecker _numberChecker =
+        private static readonly INumberChecker NumberChecker =
             new NumberChecker(Resources.CorrectNumber);
         
-        private static int numberToCheck;
-        private static string expectedCheckResult;
-        private static string actualCheckResult;
+        private static int _numberToCheck;
+        private static string _expectedCheckResult;
+        private static string _actualCheckResult;
         
         [Test]
         public void NumberChecker_LowerThanCorrectNumber_TooLowMessage() {
             // Arrange
-            expectedCheckResult = Resources.TooLowMessage;
-            numberToCheck = Resources.CorrectNumber - 1;
+            _expectedCheckResult = Resources.TooLowMessage;
+            _numberToCheck = Resources.CorrectNumber - 1;
             
             // Act
-            actualCheckResult = _numberChecker.CheckNumber(numberToCheck);
+            _actualCheckResult = NumberChecker.CheckNumber(_numberToCheck);
 
             // Assert
-            Check.That(actualCheckResult).Equals(expectedCheckResult);
+            Check.That(_actualCheckResult).Equals(_expectedCheckResult);
         }
 
         [Test]
         public void NumberChecker_HigherThanCorrectNumber_TooHighMessage() {
             // Arrange
-            expectedCheckResult = Resources.TooHighMessage;
-            numberToCheck = Resources.CorrectNumber + 1;
+            _expectedCheckResult = Resources.TooHighMessage;
+            _numberToCheck = Resources.CorrectNumber + 1;
 
             // Act
-            actualCheckResult = _numberChecker.CheckNumber(numberToCheck);
+            _actualCheckResult = NumberChecker.CheckNumber(_numberToCheck);
 
             // Assert
-            Check.That(actualCheckResult).Equals(expectedCheckResult);
+            Check.That(_actualCheckResult).Equals(_expectedCheckResult);
         }
         
         [Test]
         public void NumberChecker_CorrectNumber_CorrectMessage() {
             // Arrange
-            expectedCheckResult = Resources.CorrectMessage;
-            numberToCheck = Resources.CorrectNumber;
+            _expectedCheckResult = Resources.CorrectMessage;
+            _numberToCheck = Resources.CorrectNumber;
 
             // Act
-            actualCheckResult = _numberChecker.CheckNumber(numberToCheck);
+            _actualCheckResult = NumberChecker.CheckNumber(_numberToCheck);
 
             // Assert
-            Check.That(actualCheckResult).Equals(expectedCheckResult);
+            Check.That(_actualCheckResult).Equals(_expectedCheckResult);
         }
         
         [TestCase(Resources.LowerBound - 1)]
@@ -57,7 +57,8 @@ namespace BusinessRules.UnitTests {
         [TestCase(int.MinValue)]
         public void NumberChecker_OutOfBoundsNumber_Exception(int number) {
             // Arrange
-            void NumberCheckCode() => _numberChecker.CheckNumber(number);
+            INumberChecker defaultNumberChecker = new NumberChecker();
+            void NumberCheckCode() => defaultNumberChecker.CheckNumber(number);
 
             // Act && Assert
             Check.ThatCode(NumberCheckCode).Throws<ArgumentOutOfRangeException>();
