@@ -9,11 +9,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Common", "Common\Common.csp
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{2F6CFDA9-AF42-45E1-BD6D-33D30FE63996}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BusinessRules.UnitTests", "BusinessRules.UnitTests\BusinessRules.UnitTests.csproj", "{E0402DCC-DDF3-420E-831D-95F1D55DF770}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BusinessRules.UnitTests", "Tests\BusinessRules.UnitTests\BusinessRules.UnitTests.csproj", "{E0402DCC-DDF3-420E-831D-95F1D55DF770}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UseCases", "UseCases\UseCases.csproj", "{B2EC2F85-9575-4C7A-AAE0-E67D4EA699F9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UseCases.BehaviorTests", "UseCases.BehaviorTests\UseCases.BehaviorTests.csproj", "{D7D8D714-9C6A-49FB-AB20-43B4B9A58425}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UseCases.BehaviorTests", "Tests\UseCases.BehaviorTests\UseCases.BehaviorTests.csproj", "{D7D8D714-9C6A-49FB-AB20-43B4B9A58425}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Infrastructure", "Infrastructure\Infrastructure.csproj", "{C6A912B7-FAEC-42E7-90C9-BC959332532E}"
 EndProject
