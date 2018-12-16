@@ -1,0 +1,116 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>JetBrains.ReSharper.Feature.Services.Cpp</name>
+    </assembly>
+    <members>
+        <member name="T:JetBrains.ReSharper.Feature.Services.Cpp.IncludesProfiler.UIInteractive.Window.Controls.CppIncludeesControl">
+            <summary>
+            CppIncludeesControl
+            </summary>
+        </member>
+        <member name="M:JetBrains.ReSharper.Feature.Services.Cpp.IncludesProfiler.UIInteractive.Window.Controls.CppIncludeesControl.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:JetBrains.ReSharper.Feature.Services.Cpp.IncludesProfiler.UIInteractive.Window.Controls.CppIncludersControl">
+            <summary>
+            CppIncludersControl
+            </summary>
+        </member>
+        <member name="M:JetBrains.ReSharper.Feature.Services.Cpp.IncludesProfiler.UIInteractive.Window.Controls.CppIncludersControl.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:JetBrains.ReSharper.Feature.Services.Cpp.IncludesProfiler.UIInteractive.Window.CppIncludesProfilerView">
+            <summary>
+            CppIncludesProfilerView
+            </summary>
+        </member>
+        <member name="M:JetBrains.ReSharper.Feature.Services.Cpp.IncludesProfiler.UIInteractive.Window.CppIncludesProfilerView.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:JetBrains.ReSharper.Feature.Services.Cpp.ContextHighlighter.CppMatchingFormatContextHighlighter">
+            <summary>
+            This class matches corresponding "... %_ ..." and arguments of printf()
+            </summary>
+        </member>
+        <member name="M:JetBrains.ReSharper.Feature.Services.Cpp.ContextHighlighter.CppMatchingFormatContextHighlighter.CollectHighlightings(JetBrains.ReSharper.Psi.DataContext.IPsiDocumentRangeView,JetBrains.ReSharper.Daemon.CaretDependentFeatures.HighlightingsConsumer)">
+            <summary>
+            Entry point of the class: collects highlighting of corresponding format codes and arguments of printf()
+            </summary>
+        </member>
+        <member name="M:JetBrains.ReSharper.Feature.Services.Cpp.ContextHighlighter.CppMatchingFormatContextHighlighter.FindPrintfExpression(JetBrains.ReSharper.Psi.Cpp.Tree.ICppExpressionNode,JetBrains.ReSharper.Psi.Cpp.Services.CppFormatOverviewBase@,System.Int32@)">
+            <summary>
+            finds the enveloping printf (if any) and tells the index of selected argument (that may be a buffer, a format, or a data to print - we don't check it yet)
+            </summary>
+            <returns>true if a highlightable printf() is found, false otherwise</returns>
+        </member>
+        <member name="T:JetBrains.ReSharper.Feature.Services.Cpp.Options.CppOptionsPage">
+            <summary>
+            Root options page for the C++ language options.
+            </summary>
+        </member>
+        <member name="M:JetBrains.ReSharper.Feature.Services.Cpp.SelectEmbracingConstruct.CppSelectEmbracingConstructUtil.BuildNodeSelection(JetBrains.ReSharper.Psi.Tree.IFile,JetBrains.ReSharper.Psi.Tree.ITreeNode,JetBrains.ReSharper.Feature.Services.SelectEmbracingConstruct.ExtendToTheWholeLinePolicy)">
+            <summary>
+            Builds embracing selection construct for the individual node of PSI-tree
+            </summary>
+            <param name="fileNode">target file to peek into</param>
+            <param name="node">target node to build embracing selection construct around</param>
+            <param name="ewpl">extend-the-whole-line policy value</param>
+            <returns></returns>
+        </member>
+        <member name="M:JetBrains.ReSharper.Feature.Services.Cpp.SelectEmbracingConstruct.CppSelectEmbracingConstructUtil.ExtendRangeSelection(JetBrains.ReSharper.Psi.Tree.IFile,JetBrains.ReSharper.Psi.Tree.ITreeNode,JetBrains.ReSharper.Psi.Tree.ITreeNode)">
+            <summary>
+            Extends embracing selection construct for the given PSI-tree's nodes 'range'
+            </summary>
+            <param name="fileNode">target file to peek into</param>
+            <param name="first">head node of the range</param>
+            <param name="last">tail node of the range</param>
+            <returns></returns>
+        </member>
+        <member name="M:JetBrains.ReSharper.Feature.Services.Cpp.SelectEmbracingConstruct.CppSelectEmbracingConstructUtil.ExtendPPRangeSelection(JetBrains.ReSharper.Psi.Tree.IFile,JetBrains.ReSharper.Psi.Tree.ITreeNode,JetBrains.ReSharper.Psi.Tree.ITreeNode)">
+            <summary>
+            Extends embracing PP selection construct for the given PSI-tree's nodes 'range'
+            </summary>
+            <param name="fileNode">target file to peek into</param>
+            <param name="first">head node of the range</param>
+            <param name="last">tail node of the range</param>
+            <returns></returns>
+        </member>
+        <member name="T:XamlGeneratedNamespace.GeneratedInternalTypeHelper">
+            <summary>
+            GeneratedInternalTypeHelper
+            </summary>
+        </member>
+        <member name="M:XamlGeneratedNamespace.GeneratedInternalTypeHelper.CreateInstance(System.Type,System.Globalization.CultureInfo)">
+            <summary>
+            CreateInstance
+            </summary>
+        </member>
+        <member name="M:XamlGeneratedNamespace.GeneratedInternalTypeHelper.GetPropertyValue(System.Reflection.PropertyInfo,System.Object,System.Globalization.CultureInfo)">
+            <summary>
+            GetPropertyValue
+            </summary>
+        </member>
+        <member name="M:XamlGeneratedNamespace.GeneratedInternalTypeHelper.SetPropertyValue(System.Reflection.PropertyInfo,System.Object,System.Object,System.Globalization.CultureInfo)">
+            <summary>
+            SetPropertyValue
+            </summary>
+        </member>
+        <member name="M:XamlGeneratedNamespace.GeneratedInternalTypeHelper.CreateDelegate(System.Type,System.Object,System.String)">
+            <summary>
+            CreateDelegate
+            </summary>
+        </member>
+        <member name="M:XamlGeneratedNamespace.GeneratedInternalTypeHelper.AddEventHandler(System.Reflection.EventInfo,System.Object,System.Delegate)">
+            <summary>
+            AddEventHandler
+            </summary>
+        </member>
+    </members>
+</doc>

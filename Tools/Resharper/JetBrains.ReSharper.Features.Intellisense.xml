@@ -1,0 +1,862 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>JetBrains.ReSharper.Features.Intellisense</name>
+    </assembly>
+    <members>
+        <member name="T:JetBrains.ReSharper.Features.Intellisense.CodeCompletion.Asp.CSharp.Rules.MvcActionCSharpTransformationRule">
+            <summary>
+            Rule to remove trailing parenthesis in action methods
+            </summary>
+        </member>
+        <member name="T:JetBrains.ReSharper.Features.Intellisense.CodeCompletion.Asp.VB.MvcActionVBTransformationRule">
+            <summary>
+            Rule to remove trailing parenthesis in action methods
+            </summary>
+        </member>
+        <member name="T:JetBrains.ReSharper.Features.Intellisense.CodeCompletion.Asp.Rules.MvcActionTransformationRule`1">
+            <summary>
+            Rule to remove trailing parenthesis in action methods
+            </summary>
+        </member>
+        <member name="M:JetBrains.ReSharper.Features.Intellisense.CodeCompletion.BuildScripts.MSBuild.LookupItems.MSBuildElementLookupItem.Accept(JetBrains.TextControl.ITextControl,JetBrains.DocumentModel.DocumentRange,JetBrains.ReSharper.Feature.Services.Lookup.LookupItemInsertType,JetBrains.ReSharper.Feature.Services.Lookup.Suffix,JetBrains.ProjectModel.ISolution,System.Boolean)">
+            <summary>
+            Completes the item at the specified range.
+            </summary>
+        </member>
+        <member name="P:JetBrains.ReSharper.Features.Intellisense.CodeCompletion.BuildScripts.MSBuild.Rules.MSBuildTagCompletionRule.CanGenerate">
+            <summary>
+            Gets flag indicating whether the rule can generate members
+            </summary>
+        </member>
+        <member name="M:JetBrains.ReSharper.Features.Intellisense.CodeCompletion.BuildScripts.MSBuild.Rules.MSBuildTagCompletionRule.IsAvailable(JetBrains.ReSharper.Features.Intellisense.CodeCompletion.BuildScripts.MSBuild.MSBuildCodeCompletionContext)">
+            <summary>
+            Determines whether the rule is applicable in the given context
+            </summary>
+        </member>
+        <member name="M:JetBrains.ReSharper.Features.Intellisense.CodeCompletion.BuildScripts.MSBuild.Rules.MSBuildTagCompletionRule.AddLookupItems(JetBrains.ReSharper.Features.Intellisense.CodeCompletion.BuildScripts.MSBuild.MSBuildCodeCompletionContext,JetBrains.ReSharper.Feature.Services.CodeCompletion.Infrastructure.LookupItems.IItemsCollector)">
+            <summary>
+            Applies the rule
+            </summary>
+        </member>
+        <member name="M:JetBrains.ReSharper.Features.Intellisense.CodeCompletion.BuildScripts.MSBuild.Rules.MSBuildTagCompletionRule.CompleteItemGroupElement(JetBrains.ReSharper.Features.Intellisense.CodeCompletion.BuildScripts.MSBuild.MSBuildCodeCompletionContext,JetBrains.ReSharper.Feature.Services.CodeCompletion.Infrastructure.LookupItems.IItemsCollector)">
+            <summary>
+            Completes item group element
+            </summary>
+            <param name="context"></param>
+            <param name="collector"></param>
+        </member>
+        <member name="M:JetBrains.ReSharper.Features.Intellisense.CodeCompletion.BuildScripts.NAnt.LookupItems.NAntAttributeLookupItem.Accept(JetBrains.TextControl.ITextControl,JetBrains.DocumentModel.DocumentRange,JetBrains.ReSharper.Feature.Services.Lookup.LookupItemInsertType,JetBrains.ReSharper.Feature.Services.Lookup.Suffix,JetBrains.ProjectModel.ISolution,System.Boolean)">
+            <summary>
+            Completes the item at the specified range.
+            </summary>
+        </member>
+        <member name="M:JetBrains.ReSharper.Features.Intellisense.CodeCompletion.BuildScripts.NAnt.LookupItems.NAntElementLookupItem.Accept(JetBrains.TextControl.ITextControl,JetBrains.DocumentModel.DocumentRange,JetBrains.ReSharper.Feature.Services.Lookup.LookupItemInsertType,JetBrains.ReSharper.Feature.Services.Lookup.Suffix,JetBrains.ProjectModel.ISolution,System.Boolean)">
+            <summary>
+            Completes the item at the specified range.
+            </summary>
+        </member>
+        <member name="M:JetBrains.ReSharper.Features.Intellisense.CodeCompletion.BuildScripts.NAnt.LookupItems.NAntFunctionLookupItem.Accept(JetBrains.TextControl.ITextControl,JetBrains.DocumentModel.DocumentRange,JetBrains.ReSharper.Feature.Services.Lookup.LookupItemInsertType,JetBrains.ReSharper.Feature.Services.Lookup.Suffix,JetBrains.ProjectModel.ISolution,System.Boolean)">
+            <summary>
+            Completes the item at the specified range.
+            </summary>
+        </member>
+        <member name="M:JetBrains.ReSharper.Features.Intellisense.CodeCompletion.BuildScripts.NAnt.LookupItems.NAntPropertyLookupItem.Accept(JetBrains.TextControl.ITextControl,JetBrains.DocumentModel.DocumentRange,JetBrains.ReSharper.Feature.Services.Lookup.LookupItemInsertType,JetBrains.ReSharper.Feature.Services.Lookup.Suffix,JetBrains.ProjectModel.ISolution,System.Boolean)">
+            <summary>
+            Completes the item at the specified range.
+            </summary>
+        </member>
+        <member name="M:JetBrains.ReSharper.Features.Intellisense.CodeCompletion.BuildScripts.NAnt.LookupItems.NAntScriptElementLookupItem.Accept(JetBrains.TextControl.ITextControl,JetBrains.DocumentModel.DocumentRange,JetBrains.ReSharper.Feature.Services.Lookup.LookupItemInsertType,JetBrains.ReSharper.Feature.Services.Lookup.Suffix,JetBrains.ProjectModel.ISolution,System.Boolean)">
+            <summary>
+            Completes the item at the specified range.
+            </summary>
+        </member>
+        <member name="M:JetBrains.ReSharper.Features.Intellisense.CodeCompletion.BuildScripts.NAnt.LookupItems.NAntSimpleLookupItem.Accept(JetBrains.TextControl.ITextControl,JetBrains.DocumentModel.DocumentRange,JetBrains.ReSharper.Feature.Services.Lookup.LookupItemInsertType,JetBrains.ReSharper.Feature.Services.Lookup.Suffix,JetBrains.ProjectModel.ISolution,System.Boolean)">
+            <summary>
+            Completes the item at the specified range.
+            </summary>
+        </member>
+        <member name="M:JetBrains.ReSharper.Features.Intellisense.CodeCompletion.BuildScripts.NAnt.LookupItems.NAntTargetLookupItem.Accept(JetBrains.TextControl.ITextControl,JetBrains.DocumentModel.DocumentRange,JetBrains.ReSharper.Feature.Services.Lookup.LookupItemInsertType,JetBrains.ReSharper.Feature.Services.Lookup.Suffix,JetBrains.ProjectModel.ISolution,System.Boolean)">
+            <summary>
+            Completes the item at the specified range.
+            </summary>
+        </member>
+        <member name="M:JetBrains.ReSharper.Features.Intellisense.CodeCompletion.BuildScripts.NAnt.Rules.NAntPropertyCompletionRule.AddLookupItems(JetBrains.ReSharper.Features.Intellisense.CodeCompletion.BuildScripts.NAnt.NAntCodeCompletionContext,JetBrains.ReSharper.Feature.Services.CodeCompletion.Infrastructure.LookupItems.IItemsCollector)">
+            <summary>
+            Applies the rule
+            </summary>
+        </member>
+        <member name="M:JetBrains.ReSharper.Features.Intellisense.CodeCompletion.BuildScripts.NAnt.Rules.NAntScriptCompletionRule.IsAvailable(JetBrains.ReSharper.Features.Intellisense.CodeCompletion.BuildScripts.NAnt.NAntCodeCompletionContext)">
+            <summary>
+            Determines whether the rule is applicable in the given context
+            </summary>
+        </member>
+        <member name="M:JetBrains.ReSharper.Features.Intellisense.CodeCompletion.BuildScripts.NAnt.Rules.NAntScriptCompletionRule.AddLookupItems(JetBrains.ReSharper.Features.Intellisense.CodeCompletion.BuildScripts.NAnt.NAntCodeCompletionContext,JetBrains.ReSharper.Feature.Services.CodeCompletion.Infrastructure.LookupItems.IItemsCollector)">
+            <summary>
+            Applies the rule
+            </summary>
+        </member>
+        <member name="P:JetBrains.ReSharper.Features.Intellisense.CodeCompletion.BuildScripts.NAnt.Rules.NAntTargetCompletionRule.CanGenerate">
+            <summary>
+            Gets flag indicating whether the rule can generate members
+            </summary>
+        </member>
+        <member name="M:JetBrains.ReSharper.Features.Intellisense.CodeCompletion.BuildScripts.NAnt.Rules.NAntTargetCompletionRule.IsAvailable(JetBrains.ReSharper.Features.Intellisense.CodeCompletion.BuildScripts.NAnt.NAntCodeCompletionContext)">
+            <summary>
+            Determines whether the rule is applicable in the given context
+            </summary>
+        </member>
+        <member name="M:JetBrains.ReSharper.Features.Intellisense.CodeCompletion.BuildScripts.NAnt.Rules.NAntTargetCompletionRule.AddLookupItems(JetBrains.ReSharper.Features.Intellisense.CodeCompletion.BuildScripts.NAnt.NAntCodeCompletionContext,JetBrains.ReSharper.Feature.Services.CodeCompletion.Infrastructure.LookupItems.IItemsCollector)">
+            <summary>
+            Applies the rule
+            </summary>
+        </member>
+        <member name="T:JetBrains.ReSharper.Features.Intellisense.CodeCompletion.CSharp.CSharpLookupItemFactory">
+            <summary>
+              Creates code completion items for certain scanarios
+            </summary>
+        </member>
+        <member name="M:JetBrains.ReSharper.Features.Intellisense.CodeCompletion.CSharp.KeywordCompletionUtil.SuggestOldEntryPoint(JetBrains.ReSharper.Psi.Tree.ITreeNode,JetBrains.ReSharper.Psi.Tree.ITreeNode,System.String)">
+            <summary>
+            Suggest the keyword which could be placed instead of the given tree node
+            </summary>
+        </member>
+        <member name="T:JetBrains.ReSharper.Features.Intellisense.CodeCompletion.CSharp.Rules.AliasRule">
+            <summary>
+            Add the aliases to completion list
+            </summary>
+        </member>
+        <member name="T:JetBrains.ReSharper.Features.Intellisense.CodeCompletion.CSharp.Rules.AttributeListRule">
+            <summary>
+            Decorates attributes in declaration list
+            </summary>
+        </member>
+        <member name="T:JetBrains.ReSharper.Features.Intellisense.CodeCompletion.CSharp.Rules.AutomaticCompletionWhereValueIsExpected">
+            <summary>
+            Fix automatic completiuon behaviour where value is expected...
+            </summary>
+        </member>
+        <member name="T:JetBrains.ReSharper.Features.Intellisense.CodeCompletion.CSharp.Rules.BaseClassesRule">
+            <summary>
+            Rule for filtering classes in base classes list
+            </summary>
+        </member>
+        <member name="T:JetBrains.ReSharper.Features.Intellisense.CodeCompletion.CSharp.Rules.IndexersRule">
+            <summary>
+            Adds indexers after dot
+            </summary>
+        </member>
+        <member name="T:JetBrains.ReSharper.Features.Intellisense.CodeCompletion.CSharp.Rules.MemberInitializerExpressionRule">
+            <summary>
+            Correct lookup focus behaviour when member initializer is being completed.
+            </summary>
+        </member>
+        <member name="T:JetBrains.ReSharper.Features.Intellisense.CodeCompletion.CSharp.Rules.MethodGroupOrLambdaExpectedRule">
+            <summary>
+            Rule for completing methods in delegate creation expressions
+            </summary>
+        </member>
+        <member name="T:JetBrains.ReSharper.Features.Intellisense.CodeCompletion.CSharp.Rules.MethodGroupOrLambdaExpectedRuleForLambdaParameterName">
+            <summary>
+            Rule for completing methods in delegate creation expressions for second parameter (x, y|)
+            </summary>
+        </member>
+        <member name="T:JetBrains.ReSharper.Features.Intellisense.CodeCompletion.CSharp.Rules.LambdaParameterNameExpectedRuleWithReparse">
+            <summary>
+            Rule for completing methods in delegate creation expressions for second parameter (x, y|)
+            </summary>
+        </member>
+        <member name="T:JetBrains.ReSharper.Features.Intellisense.CodeCompletion.CSharp.Rules.NewStatementRule">
+            <summary>
+            Decorates ReferenceName in the 'new' expression.
+            </summary>
+        </member>
+        <member name="T:JetBrains.ReSharper.Features.Intellisense.CodeCompletion.CSharp.Rules.Smart.AddThisExpression">
+            <summary>
+            Adds extra items (not originally included in basic completion)
+            </summary>
+        </member>
+        <member name="T:JetBrains.ReSharper.Features.Intellisense.CodeCompletion.CSharp.Rules.Smart.AddTypeOf">
+            <summary>
+            Adds extra items (not originally included in basic completion)
+            </summary>
+        </member>
+        <member name="T:JetBrains.ReSharper.Features.Intellisense.CodeCompletion.CSharp.Rules.Smart.CorellationAndProximityComparer">
+            <summary>
+            This comparer first compares by proximity to expected name, then by declared element type, 
+            then (for locals) by proximity of declaration to usage
+            </summary>
+        </member>
+        <member name="T:JetBrains.ReSharper.Features.Intellisense.CodeCompletion.CSharp.Rules.Smart.ExpressionStatement">
+            <summary>
+            Smart completion of type members where statement is expected.
+            </summary>
+        </member>
+        <member name="T:JetBrains.ReSharper.Features.Intellisense.CodeCompletion.CSharp.Rules.Smart.FilterBasicCompletion">
+            <summary>
+            Smart code completion: filter symbol table regarding expected types...
+            </summary>
+        </member>
+        <member name="T:JetBrains.ReSharper.Features.Intellisense.CodeCompletion.CSharp.Rules.Smart.NewStatementSmartCompletionType">
+            <summary>
+            Smart completion logic after new
+            </summary>
+        </member>
+        <member name="T:JetBrains.ReSharper.Features.Intellisense.CodeCompletion.CSharp.Rules.Smart.SmartTypeInCast">
+            <summary>
+            Smart completion logic for casts
+            </summary>
+        </member>
+        <member name="T:JetBrains.ReSharper.Features.Intellisense.CodeCompletion.Filters.ContextMenuServiceExtensions">
+            <summary>
+            For solving problem with unknown data context in context menus.
+            </summary>
+        </member>
+        <member name="T:JetBrains.ReSharper.Features.Intellisense.CodeCompletion.Html.JavaScript.AutopopupInDocCommentReferenceBase">
+            <summary>
+            start automatic code completion in /// &lt;reference&gt; expression
+            </summary> 
+        </member>
+        <member name="P:JetBrains.ReSharper.Features.Intellisense.CodeCompletion.Html.HtmlFooterItem.Image">
+            <summary>
+            Gets item image
+            </summary>
+        </member>
+        <member name="T:JetBrains.ReSharper.Features.Intellisense.CodeCompletion.JavaScript.AutomaticStrategies.AutopopupInStringLiteralStrateryBase">
+            <summary>
+            start automatic code completion in 
+            xxx["dd" expression
+            xxx("dd" expression
+            xxx({"dd" expression
+            </summary>  
+        </member>
+        <member name="M:JetBrains.ReSharper.Features.Intellisense.CodeCompletion.JavaScript.JavaScriptArgumentsContext.Create(JetBrains.ReSharper.Psi.JavaScript.Tree.IIdentifierExpression,JetBrains.ReSharper.Psi.TreeTextRange@)">
+            <summary>
+            Calculates completion range for the specified reference
+            </summary>
+        </member>
+        <member name="T:JetBrains.ReSharper.Features.Intellisense.CodeCompletion.JavaScript.JavaScriptCodeCompletionContextProviderInStringLiterals">
+            <summary>
+            foo["xxx"]
+            </summary>
+        </member>
+        <member name="T:JetBrains.ReSharper.Features.Intellisense.CodeCompletion.JavaScript.JavaScriptFollowingExpressionContext">
+            <summary>
+            Range and text of the expression that could be substituted into arguments list of a completed item.
+            </summary>
+        </member>
+        <member name="M:JetBrains.ReSharper.Features.Intellisense.CodeCompletion.JavaScript.JavaScriptFollowingExpressionContext.Create(JetBrains.ReSharper.Psi.JavaScript.Tree.IJavaScriptFile,JetBrains.ReSharper.Psi.TreeTextRange)">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:JetBrains.ReSharper.Features.Intellisense.CodeCompletion.JavaScript.JavaScriptLookupItemRelevance">
+            <summary>
+              Indicates javascript lookup item relevance. First 16 bits and last 16 bits are reserved for general relevance properties  
+            </summary>
+        </member>
+        <member name="T:JetBrains.ReSharper.Features.Intellisense.CodeCompletion.Razor.Rules.MvcActionRazorTransformationRule">
+            <summary>
+            Rule to remove trailing parenthesis in action methods
+            </summary>
+        </member>
+        <member name="T:JetBrains.ReSharper.Features.Intellisense.CodeCompletion.Sessions.CodeCompletionSession">
+            <summary>
+            Represents one session of using code completion
+            </summary>
+        </member>
+        <member name="T:JetBrains.ReSharper.Features.Intellisense.Options.CompletionAppearancePage">
+            <summary>
+            The visual completion settings.
+            </summary>
+        </member>
+        <member name="T:JetBrains.ReSharper.Features.Intellisense.Options.EditorBehaviorPage">
+            <summary>
+              The Editor-related options.
+            </summary>
+        </member>
+        <member name="T:JetBrains.ReSharper.Features.Intellisense.Options.IntelliSensePage">
+            <summary>
+            The IntelliSense node in the options tree.
+            </summary>
+        </member>
+        <member name="T:JetBrains.ReSharper.Features.Intellisense.Options.ParameterInfoPage">
+            <summary>
+            IntelliSense Parameter Info.
+            </summary>
+        </member>
+        <member name="T:JetBrains.ReSharper.Features.Intellisense.Options.VBEditorBehaviorPage">
+            <summary>
+              The VB Editor-related options.
+            </summary>
+        </member>
+        <member name="T:JetBrains.ReSharper.Features.Intellisense.Resources.FeaturesIntellisenseThemedIcons">
+             <summary>
+            	<para>
+            		<para>Autogenerated identifier classes and identifier objects to Themed Icons registered with <see cref="T:JetBrains.Application.Icons.IThemedIconManager"></see>.</para>
+            		<para>Identifier classes should be used in attributes, XAML, or generic parameters. Where an <see cref="T:JetBrains.UI.Icons.IconId"></see> value is expected, use the identifier object in the <c>Id</c> field of the identifier class.</para>
+            	</para>
+            </summary>
+            <remarks>
+            	<para>This code was compile-time generated to support Themed Icons in the JetBrains application.</para>
+            	<para>It has two primary goals: load the icons of this assembly to be registered with <see cref="T:JetBrains.Application.Icons.IThemedIconManager"></see> so that they were WPF-accessible and theme-sensitive; and emit early-bound accessors for referencing icons in codebehind in a compile-time-validated manner.</para>
+            	<h1>XAML</h1>
+            	<para>For performance reasons, the icons are not individually exposed with application resources. There is a custom markup extension to bind an image source in markup.</para>
+            	<para>To use an icon from XAML, set an <see cref="T:System.Windows.Media.ImageSource"></see> property to the <see cref="T:System.CodeDom.CodeTypeReference"></see> markup extension, which takes an icon identifier class (nested in <see cref="T:JetBrains.ReSharper.Features.Intellisense.Resources.FeaturesIntellisenseThemedIcons"></see> class) as a parameter.</para>
+            	<para>Example:</para>
+            	<code>&lt;Image Source="{icons:ThemedIcon myres:FeaturesIntellisenseThemedIcons+Trinity}" /&gt;</code>
+            	<h1>Attributes</h1>
+            	<para>Sometimes you have to reference an icon from a type attriute when you're defining objects in code. Typical examples are Options pages and Tool Windows.</para>
+            	<para>To avoid the use of string IDs which are not validated very well, we've emitted identifier classes to be used with <c>typeof()</c> expression, one per each icon. Use the attribute overload which takes a <see cref="T:System.Type"></see> for an image, and choose your icon class from nested classes in the <see cref="T:JetBrains.ReSharper.Features.Intellisense.Resources.FeaturesIntellisenseThemedIcons"></see> class.</para>
+            	<para>Example:</para>
+            	<code>[Item(Name="Sample", Icon=typeof(FeaturesIntellisenseThemedIcons.Trinity))]</code>
+            	<h1>CodeBehind</h1>
+            	<para>In codebehind, we have two distinct tasks: (a) specify some icon in the APIs and (b) render icon images onscreen.</para>
+            	<para>On the APIs stage you should only manipulate icon identifier objects (of type <see cref="T:JetBrains.UI.Icons.IconId"></see>, statically defined in <see cref="T:JetBrains.ReSharper.Features.Intellisense.Resources.FeaturesIntellisenseThemedIcons"></see> in <c>Id</c> fields). Icon identifier classes (nested in <see cref="T:JetBrains.ReSharper.Features.Intellisense.Resources.FeaturesIntellisenseThemedIcons"></see>) should be turned into icon identifier objects as early as possible. Rendering is about getting an <see cref="T:System.Windows.Media.ImageSource"></see> to assign to WPF, or <see cref="T:System.Drawing.Bitmap"></see> to use with GDI+ / Windows Forms.</para>
+            	<para>You should turn an identifier object into a rendered image as late as possible. The identifier is static and lightweight and does not depend on the current theme, while the image is themed and has to be loaded or generated/rasterized. You need an <see cref="T:JetBrains.Application.Icons.IThemedIconManager"></see> instance to get the image out of an icon identifier object. Once you got the image, you should take care to change it with theme changes — either by using a live image property, or by listening to the theme change event. See <see cref="T:JetBrains.Application.Icons.IThemedIconManager"></see> and its extensions for the related facilities.</para>
+            	<para>Example:</para>
+            	<code>// Getting IconId identifier object to use with APIs
+            IconId iconid = FeaturesIntellisenseThemedIcons.Trinity.Id;</code>
+            	<code>// Getting IconId out of an Icon Identifier Class type
+            IconId iconid = new JetBrains.Application.Icons.CompiledIconsCs.CompiledIconCsId(typeof(FeaturesIntellisenseThemedIcons.Trinity));</code>
+            	<code>// Getting image for screen rendering by IconId
+            themediconmanager.Icons[icnoid]</code>
+            	<code>// Getting image for screen rendering by Icon Identifier Class
+            themediconmanager.GetIcon&lt;FeaturesIntellisenseThemedIcons.Trinity&gt;()</code>
+            	<h1>Icons Origin</h1>
+            	<para>This code was generated by a pre-compile build task from a set of input files which are XAML files adhering to a certain convention, as convenient for exporting them from the Illustrator workspace, plus separate PNG files with raster icons. In the projects, these files are designated with <c>ThemedIconsXamlV3</c> and <c>ThemedIconPng</c> build actions and do not themselves get into the output assembly. All of such files are processed, vector images for different themes of the same icon are split and combined into the single list of icons in this assembly. This list is then written into the genearted XAML file (compiled into BAML within assembly), and serves as the source for this generated code.</para>
+            </remarks>
+        </member>
+        <member name="T:JetBrains.ReSharper.Features.Intellisense.Resources.FeaturesIntellisenseThemedIcons.CodeCompletionPage">
+             <summary>
+            	<para>
+            		<para>CodeCompletionPage Themed Icon generated identifiers:</para>
+            		<para>— <see cref="T:JetBrains.ReSharper.Features.Intellisense.Resources.FeaturesIntellisenseThemedIcons.CodeCompletionPage"></see> identifier class, for use in attributes, XAML, and generic parameters;</para>
+            		<para>— <see cref="F:JetBrains.ReSharper.Features.Intellisense.Resources.FeaturesIntellisenseThemedIcons.CodeCompletionPage.Id"></see> identifier object, as a field in the identifier class, for use where an <see cref="T:JetBrains.UI.Icons.IconId"></see> value is expected.</para>
+            		<para>
+            			<code>
+                                             
+                 `=TVZZZZkJ!`                
+                ~ao=-EEEE.=ok!               
+               ^E7`  EEEE  `LE!              
+               Ck-   kkkk   `ka              
+               TV_``````````-V]              
+               .23-````````-}y_              
+                `caT;````=|a|'               
+                  `aa````aa`                 
+             77777722....22777777777777777777
+             tt    oo....oo    dd  dd  dd  tt
+             II    )o!--=ol    ZZZZZZZZZZZZII
+             55`````/{uu]+.````5555555555``55
+             kk````````````````xxxxxxxxxxxxkk
+             66................JJ..JJ..JJ..66
+             HHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHH
+            </code>
+            		</para>
+            	</para>
+            </summary>
+            <remarks>
+            	<para>For details on Themed Icons and their use, see Remarks on the outer class.</para>
+            </remarks>
+            <example>
+            	<code>&lt;Image Source="{icons:ThemedIcon myres:FeaturesIntellisenseThemedIcons+CodeCompletionPage}" /&gt;        &lt;!-- XAML --&gt;</code>
+            </example>
+            <example>
+            	<code>[Item(Name="Sample", Icon=typeof(FeaturesIntellisenseThemedIcons.CodeCompletionPage))]        // C# Type attribute</code>
+            </example>
+            <example>
+            	<code>IconId iconid = FeaturesIntellisenseThemedIcons.CodeCompletionPage.Id;        // IconId identifier object</code>
+            </example>
+            <example>
+            	<code>themediconmanager.GetIcon&lt;FeaturesIntellisenseThemedIcons.CodeCompletionPage&gt;()        // Icon image for rendering</code>
+            </example>
+        </member>
+        <member name="F:JetBrains.ReSharper.Features.Intellisense.Resources.FeaturesIntellisenseThemedIcons.CodeCompletionPage.Id">
+            <inheritdoc cref="T:JetBrains.ReSharper.Features.Intellisense.Resources.FeaturesIntellisenseThemedIcons.CodeCompletionPage">identifier class</inheritdoc>
+        </member>
+        <member name="M:JetBrains.ReSharper.Features.Intellisense.Resources.FeaturesIntellisenseThemedIcons.CodeCompletionPage.Load_Color">
+            <summary>Loads the image for Themed Icon CodeCompletionPage theme aspect Color.</summary>
+        </member>
+        <member name="M:JetBrains.ReSharper.Features.Intellisense.Resources.FeaturesIntellisenseThemedIcons.CodeCompletionPage.Load_Gray">
+            <summary>Loads the image for Themed Icon CodeCompletionPage theme aspect Gray.</summary>
+        </member>
+        <member name="M:JetBrains.ReSharper.Features.Intellisense.Resources.FeaturesIntellisenseThemedIcons.CodeCompletionPage.Load_GrayDark">
+            <summary>Loads the image for Themed Icon CodeCompletionPage theme aspect GrayDark.</summary>
+        </member>
+        <member name="M:JetBrains.ReSharper.Features.Intellisense.Resources.FeaturesIntellisenseThemedIcons.CodeCompletionPage.GetThemeImages">
+            <summary>Returns the set of theme images for Themed Icon CodeCompletionPage.</summary>
+        </member>
+        <member name="T:JetBrains.ReSharper.Features.Intellisense.Resources.FeaturesIntellisenseThemedIcons.CompletionAppearance">
+             <summary>
+            	<para>
+            		<para>CompletionAppearance Themed Icon generated identifiers:</para>
+            		<para>— <see cref="T:JetBrains.ReSharper.Features.Intellisense.Resources.FeaturesIntellisenseThemedIcons.CompletionAppearance"></see> identifier class, for use in attributes, XAML, and generic parameters;</para>
+            		<para>— <see cref="F:JetBrains.ReSharper.Features.Intellisense.Resources.FeaturesIntellisenseThemedIcons.CompletionAppearance.Id"></see> identifier object, as a field in the identifier class, for use where an <see cref="T:JetBrains.UI.Icons.IconId"></see> value is expected.</para>
+            		<para>
+            			<code>
+                  !oUD8M$DRs`                
+                 Tbc_.-_"/ogD                
+                 4b `.-_"^=gg                
+                 }C1uoaSkPX4b                
+                 }C`.  __,"4b                
+                 }C`.  __,"4b                
+                 }C`.  __,"4b                
+                 }C`.  __,"4b                
+                 }C`.  __,"4b                
+             llll}C`.  __,"4bllllllllllllllll
+             ]]``}C1uoaSkPX4b``GG``GG``GG``]]
+             oo``LCr_--__=F4x``666666666666oo
+             SS```:)u)"^JP}"```VVVVVVVVVV``SS
+             hh....."7aSl^.....uuuuuuuuuuuuhh
+             ww-------^~-------tt--tt--tt--ww
+             OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO
+            </code>
+            		</para>
+            	</para>
+            </summary>
+            <remarks>
+            	<para>For details on Themed Icons and their use, see Remarks on the outer class.</para>
+            </remarks>
+            <example>
+            	<code>&lt;Image Source="{icons:ThemedIcon myres:FeaturesIntellisenseThemedIcons+CompletionAppearance}" /&gt;        &lt;!-- XAML --&gt;</code>
+            </example>
+            <example>
+            	<code>[Item(Name="Sample", Icon=typeof(FeaturesIntellisenseThemedIcons.CompletionAppearance))]        // C# Type attribute</code>
+            </example>
+            <example>
+            	<code>IconId iconid = FeaturesIntellisenseThemedIcons.CompletionAppearance.Id;        // IconId identifier object</code>
+            </example>
+            <example>
+            	<code>themediconmanager.GetIcon&lt;FeaturesIntellisenseThemedIcons.CompletionAppearance&gt;()        // Icon image for rendering</code>
+            </example>
+        </member>
+        <member name="F:JetBrains.ReSharper.Features.Intellisense.Resources.FeaturesIntellisenseThemedIcons.CompletionAppearance.Id">
+            <inheritdoc cref="T:JetBrains.ReSharper.Features.Intellisense.Resources.FeaturesIntellisenseThemedIcons.CompletionAppearance">identifier class</inheritdoc>
+        </member>
+        <member name="M:JetBrains.ReSharper.Features.Intellisense.Resources.FeaturesIntellisenseThemedIcons.CompletionAppearance.Load_Color">
+            <summary>Loads the image for Themed Icon CompletionAppearance theme aspect Color.</summary>
+        </member>
+        <member name="M:JetBrains.ReSharper.Features.Intellisense.Resources.FeaturesIntellisenseThemedIcons.CompletionAppearance.Load_Gray">
+            <summary>Loads the image for Themed Icon CompletionAppearance theme aspect Gray.</summary>
+        </member>
+        <member name="M:JetBrains.ReSharper.Features.Intellisense.Resources.FeaturesIntellisenseThemedIcons.CompletionAppearance.Load_GrayDark">
+            <summary>Loads the image for Themed Icon CompletionAppearance theme aspect GrayDark.</summary>
+        </member>
+        <member name="M:JetBrains.ReSharper.Features.Intellisense.Resources.FeaturesIntellisenseThemedIcons.CompletionAppearance.GetThemeImages">
+            <summary>Returns the set of theme images for Themed Icon CompletionAppearance.</summary>
+        </member>
+        <member name="T:JetBrains.ReSharper.Features.Intellisense.Resources.FeaturesIntellisenseThemedIcons.EditorOptionsPage">
+             <summary>
+            	<para>
+            		<para>EditorOptionsPage Themed Icon generated identifiers:</para>
+            		<para>— <see cref="T:JetBrains.ReSharper.Features.Intellisense.Resources.FeaturesIntellisenseThemedIcons.EditorOptionsPage"></see> identifier class, for use in attributes, XAML, and generic parameters;</para>
+            		<para>— <see cref="F:JetBrains.ReSharper.Features.Intellisense.Resources.FeaturesIntellisenseThemedIcons.EditorOptionsPage.Id"></see> identifier object, as a field in the identifier class, for use where an <see cref="T:JetBrains.UI.Icons.IconId"></see> value is expected.</para>
+            		<para>
+            			<code>
+                                  `*1oL.     
+                                `+h3""aRi.   
+                              `~Jsa},..=6WC' 
+                            `=lc::ctX5=__+#QJ
+                          `=t),` ``,)F9X*+bgk
+                        `={T"`  `````"TIRgH" 
+                      `;]7^`  `......_?IL_   
+                    `!Ii^.  `......:cuc-     
+                  `!ul~.  `------,)o)-       
+                `!jt='  .------"Ta|-         
+              `/aF=-  .------^7ST-           
+             /ykki^________^ik7-             
+             KK!IKKl~____~lKs-               
+             UU::/uUUt==tUl-                 
+             66,,,,/2666t_                   
+             wwwwwwwww}_                     
+            </code>
+            		</para>
+            	</para>
+            </summary>
+            <remarks>
+            	<para>For details on Themed Icons and their use, see Remarks on the outer class.</para>
+            </remarks>
+            <example>
+            	<code>&lt;Image Source="{icons:ThemedIcon myres:FeaturesIntellisenseThemedIcons+EditorOptionsPage}" /&gt;        &lt;!-- XAML --&gt;</code>
+            </example>
+            <example>
+            	<code>[Item(Name="Sample", Icon=typeof(FeaturesIntellisenseThemedIcons.EditorOptionsPage))]        // C# Type attribute</code>
+            </example>
+            <example>
+            	<code>IconId iconid = FeaturesIntellisenseThemedIcons.EditorOptionsPage.Id;        // IconId identifier object</code>
+            </example>
+            <example>
+            	<code>themediconmanager.GetIcon&lt;FeaturesIntellisenseThemedIcons.EditorOptionsPage&gt;()        // Icon image for rendering</code>
+            </example>
+        </member>
+        <member name="F:JetBrains.ReSharper.Features.Intellisense.Resources.FeaturesIntellisenseThemedIcons.EditorOptionsPage.Id">
+            <inheritdoc cref="T:JetBrains.ReSharper.Features.Intellisense.Resources.FeaturesIntellisenseThemedIcons.EditorOptionsPage">identifier class</inheritdoc>
+        </member>
+        <member name="M:JetBrains.ReSharper.Features.Intellisense.Resources.FeaturesIntellisenseThemedIcons.EditorOptionsPage.Load_Color">
+            <summary>Loads the image for Themed Icon EditorOptionsPage theme aspect Color.</summary>
+        </member>
+        <member name="M:JetBrains.ReSharper.Features.Intellisense.Resources.FeaturesIntellisenseThemedIcons.EditorOptionsPage.Load_Gray">
+            <summary>Loads the image for Themed Icon EditorOptionsPage theme aspect Gray.</summary>
+        </member>
+        <member name="M:JetBrains.ReSharper.Features.Intellisense.Resources.FeaturesIntellisenseThemedIcons.EditorOptionsPage.Load_GrayDark">
+            <summary>Loads the image for Themed Icon EditorOptionsPage theme aspect GrayDark.</summary>
+        </member>
+        <member name="M:JetBrains.ReSharper.Features.Intellisense.Resources.FeaturesIntellisenseThemedIcons.EditorOptionsPage.GetThemeImages">
+            <summary>Returns the set of theme images for Themed Icon EditorOptionsPage.</summary>
+        </member>
+        <member name="T:JetBrains.ReSharper.Features.Intellisense.Resources.FeaturesIntellisenseThemedIcons.IntellisenseAutopopupPage">
+             <summary>
+            	<para>
+            		<para>IntellisenseAutopopupPage Themed Icon generated identifiers:</para>
+            		<para>— <see cref="T:JetBrains.ReSharper.Features.Intellisense.Resources.FeaturesIntellisenseThemedIcons.IntellisenseAutopopupPage"></see> identifier class, for use in attributes, XAML, and generic parameters;</para>
+            		<para>— <see cref="F:JetBrains.ReSharper.Features.Intellisense.Resources.FeaturesIntellisenseThemedIcons.IntellisenseAutopopupPage.Id"></see> identifier object, as a field in the identifier class, for use where an <see cref="T:JetBrains.UI.Icons.IconId"></see> value is expected.</para>
+            		<para>
+            			<code>
+                           -!?7]]]]]]]]7c/_  
+                         `(]=.`        `.~F7`
+                         ro_ ``........`` 'oT
+                         55````````````````55
+             UUUUol?^"rJoSS````````````````SS
+             UU  `:;xo!:.lk_``````````````-kx
+             UUUUUU    UUUPa=-``````````.~oe-
+                 UU    UU `=z66..``."t66at=` 
+                 UU    UU    ww...^F6c.      
+                 UU    UU    dd-~Ib(.        
+                 UU    UU    AAAHT.          
+                 UU    UU                    
+             UUUUUU    UUUUUU                
+             UU   '"cT^'   UU                
+             2UUUU2J!;7oUUUUU                
+                                             
+            </code>
+            		</para>
+            	</para>
+            </summary>
+            <remarks>
+            	<para>For details on Themed Icons and their use, see Remarks on the outer class.</para>
+            </remarks>
+            <example>
+            	<code>&lt;Image Source="{icons:ThemedIcon myres:FeaturesIntellisenseThemedIcons+IntellisenseAutopopupPage}" /&gt;        &lt;!-- XAML --&gt;</code>
+            </example>
+            <example>
+            	<code>[Item(Name="Sample", Icon=typeof(FeaturesIntellisenseThemedIcons.IntellisenseAutopopupPage))]        // C# Type attribute</code>
+            </example>
+            <example>
+            	<code>IconId iconid = FeaturesIntellisenseThemedIcons.IntellisenseAutopopupPage.Id;        // IconId identifier object</code>
+            </example>
+            <example>
+            	<code>themediconmanager.GetIcon&lt;FeaturesIntellisenseThemedIcons.IntellisenseAutopopupPage&gt;()        // Icon image for rendering</code>
+            </example>
+        </member>
+        <member name="F:JetBrains.ReSharper.Features.Intellisense.Resources.FeaturesIntellisenseThemedIcons.IntellisenseAutopopupPage.Id">
+            <inheritdoc cref="T:JetBrains.ReSharper.Features.Intellisense.Resources.FeaturesIntellisenseThemedIcons.IntellisenseAutopopupPage">identifier class</inheritdoc>
+        </member>
+        <member name="M:JetBrains.ReSharper.Features.Intellisense.Resources.FeaturesIntellisenseThemedIcons.IntellisenseAutopopupPage.Load_Color">
+            <summary>Loads the image for Themed Icon IntellisenseAutopopupPage theme aspect Color.</summary>
+        </member>
+        <member name="M:JetBrains.ReSharper.Features.Intellisense.Resources.FeaturesIntellisenseThemedIcons.IntellisenseAutopopupPage.Load_Gray">
+            <summary>Loads the image for Themed Icon IntellisenseAutopopupPage theme aspect Gray.</summary>
+        </member>
+        <member name="M:JetBrains.ReSharper.Features.Intellisense.Resources.FeaturesIntellisenseThemedIcons.IntellisenseAutopopupPage.Load_GrayDark">
+            <summary>Loads the image for Themed Icon IntellisenseAutopopupPage theme aspect GrayDark.</summary>
+        </member>
+        <member name="M:JetBrains.ReSharper.Features.Intellisense.Resources.FeaturesIntellisenseThemedIcons.IntellisenseAutopopupPage.GetThemeImages">
+            <summary>Returns the set of theme images for Themed Icon IntellisenseAutopopupPage.</summary>
+        </member>
+        <member name="T:JetBrains.ReSharper.Features.Intellisense.Resources.FeaturesIntellisenseThemedIcons.IntellisenseCompletingCharsPage">
+             <summary>
+            	<para>
+            		<para>IntellisenseCompletingCharsPage Themed Icon generated identifiers:</para>
+            		<para>— <see cref="T:JetBrains.ReSharper.Features.Intellisense.Resources.FeaturesIntellisenseThemedIcons.IntellisenseCompletingCharsPage"></see> identifier class, for use in attributes, XAML, and generic parameters;</para>
+            		<para>— <see cref="F:JetBrains.ReSharper.Features.Intellisense.Resources.FeaturesIntellisenseThemedIcons.IntellisenseCompletingCharsPage.Id"></see> identifier object, as a field in the identifier class, for use where an <see cref="T:JetBrains.UI.Icons.IconId"></see> value is expected.</para>
+            		<para>
+            			<code>
+                                             
+                   `VUUUUU^                  
+                   {U,  `Sk.                 
+                  +U+ `- _Ux                 
+                 ,U}  |}  /Ur                
+                `VV` "UU!  tU"               
+                {U, `Fuuu. `Vk`              
+               +U+          ,U[              
+              ,U}  ~UUUUUU+  +U+             
+             {ZV` `VZ{lllEU_  }U3llllllllllll
+             EUUUUUU~````-kUUUUUX``GG``GG``]]
+             oo````````````````666666666666oo
+             SS````````````````SSSSSSSSSS``SS
+             hh................uuuuuuuuuuuuhh
+             ww----------------tt--tt--tt--ww
+             OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO
+            </code>
+            		</para>
+            	</para>
+            </summary>
+            <remarks>
+            	<para>For details on Themed Icons and their use, see Remarks on the outer class.</para>
+            </remarks>
+            <example>
+            	<code>&lt;Image Source="{icons:ThemedIcon myres:FeaturesIntellisenseThemedIcons+IntellisenseCompletingCharsPage}" /&gt;        &lt;!-- XAML --&gt;</code>
+            </example>
+            <example>
+            	<code>[Item(Name="Sample", Icon=typeof(FeaturesIntellisenseThemedIcons.IntellisenseCompletingCharsPage))]        // C# Type attribute</code>
+            </example>
+            <example>
+            	<code>IconId iconid = FeaturesIntellisenseThemedIcons.IntellisenseCompletingCharsPage.Id;        // IconId identifier object</code>
+            </example>
+            <example>
+            	<code>themediconmanager.GetIcon&lt;FeaturesIntellisenseThemedIcons.IntellisenseCompletingCharsPage&gt;()        // Icon image for rendering</code>
+            </example>
+        </member>
+        <member name="F:JetBrains.ReSharper.Features.Intellisense.Resources.FeaturesIntellisenseThemedIcons.IntellisenseCompletingCharsPage.Id">
+            <inheritdoc cref="T:JetBrains.ReSharper.Features.Intellisense.Resources.FeaturesIntellisenseThemedIcons.IntellisenseCompletingCharsPage">identifier class</inheritdoc>
+        </member>
+        <member name="M:JetBrains.ReSharper.Features.Intellisense.Resources.FeaturesIntellisenseThemedIcons.IntellisenseCompletingCharsPage.Load_Color">
+            <summary>Loads the image for Themed Icon IntellisenseCompletingCharsPage theme aspect Color.</summary>
+        </member>
+        <member name="M:JetBrains.ReSharper.Features.Intellisense.Resources.FeaturesIntellisenseThemedIcons.IntellisenseCompletingCharsPage.Load_Gray">
+            <summary>Loads the image for Themed Icon IntellisenseCompletingCharsPage theme aspect Gray.</summary>
+        </member>
+        <member name="M:JetBrains.ReSharper.Features.Intellisense.Resources.FeaturesIntellisenseThemedIcons.IntellisenseCompletingCharsPage.Load_GrayDark">
+            <summary>Loads the image for Themed Icon IntellisenseCompletingCharsPage theme aspect GrayDark.</summary>
+        </member>
+        <member name="M:JetBrains.ReSharper.Features.Intellisense.Resources.FeaturesIntellisenseThemedIcons.IntellisenseCompletingCharsPage.GetThemeImages">
+            <summary>Returns the set of theme images for Themed Icon IntellisenseCompletingCharsPage.</summary>
+        </member>
+        <member name="T:JetBrains.ReSharper.Features.Intellisense.Resources.FeaturesIntellisenseThemedIcons.IntellisenseGeneral">
+             <summary>
+            	<para>
+            		<para>IntellisenseGeneral Themed Icon generated identifiers:</para>
+            		<para>— <see cref="T:JetBrains.ReSharper.Features.Intellisense.Resources.FeaturesIntellisenseThemedIcons.IntellisenseGeneral"></see> identifier class, for use in attributes, XAML, and generic parameters;</para>
+            		<para>— <see cref="F:JetBrains.ReSharper.Features.Intellisense.Resources.FeaturesIntellisenseThemedIcons.IntellisenseGeneral.Id"></see> identifier object, as a field in the identifier class, for use where an <see cref="T:JetBrains.UI.Icons.IconId"></see> value is expected.</para>
+            		<para>
+            			<code>
+                             .-_,"",_-.      
+                          .,="-.````.-"="'   
+                         ";_`           -;~` 
+                       `;!.              `=!`
+               EEEEEEEEEEEEEE```````````  -+=
+               EE  EEEEEE  EE````````````  rr
+               EE  EEEEEE  EE..\L__L\...` .c!
+             wwwwwwwwwwwwwwwwww'+oo+'''`  +T-
+             ##!!!!!!!!!!!!!!##--oo--`  -LT- 
+             8888))))))))))8888--oo--  |t=`  
+               88))))))))))88          ]]    
+               DDLLLLLLLLLLDD`'_^=+cluk6X    
+               RRRRRRRRRRRRRR.'_^=+cluk6h    
+                   AA==AA  cDr'_^=+cluU6|    
+                   bb==bb   TDo+==+Tuh9T`    
+                   44==44    -rk4AGher-      
+            </code>
+            		</para>
+            	</para>
+            </summary>
+            <remarks>
+            	<para>For details on Themed Icons and their use, see Remarks on the outer class.</para>
+            </remarks>
+            <example>
+            	<code>&lt;Image Source="{icons:ThemedIcon myres:FeaturesIntellisenseThemedIcons+IntellisenseGeneral}" /&gt;        &lt;!-- XAML --&gt;</code>
+            </example>
+            <example>
+            	<code>[Item(Name="Sample", Icon=typeof(FeaturesIntellisenseThemedIcons.IntellisenseGeneral))]        // C# Type attribute</code>
+            </example>
+            <example>
+            	<code>IconId iconid = FeaturesIntellisenseThemedIcons.IntellisenseGeneral.Id;        // IconId identifier object</code>
+            </example>
+            <example>
+            	<code>themediconmanager.GetIcon&lt;FeaturesIntellisenseThemedIcons.IntellisenseGeneral&gt;()        // Icon image for rendering</code>
+            </example>
+        </member>
+        <member name="F:JetBrains.ReSharper.Features.Intellisense.Resources.FeaturesIntellisenseThemedIcons.IntellisenseGeneral.Id">
+            <inheritdoc cref="T:JetBrains.ReSharper.Features.Intellisense.Resources.FeaturesIntellisenseThemedIcons.IntellisenseGeneral">identifier class</inheritdoc>
+        </member>
+        <member name="M:JetBrains.ReSharper.Features.Intellisense.Resources.FeaturesIntellisenseThemedIcons.IntellisenseGeneral.Load_Color">
+            <summary>Loads the image for Themed Icon IntellisenseGeneral theme aspect Color.</summary>
+        </member>
+        <member name="M:JetBrains.ReSharper.Features.Intellisense.Resources.FeaturesIntellisenseThemedIcons.IntellisenseGeneral.Load_Gray">
+            <summary>Loads the image for Themed Icon IntellisenseGeneral theme aspect Gray.</summary>
+        </member>
+        <member name="M:JetBrains.ReSharper.Features.Intellisense.Resources.FeaturesIntellisenseThemedIcons.IntellisenseGeneral.Load_GrayDark">
+            <summary>Loads the image for Themed Icon IntellisenseGeneral theme aspect GrayDark.</summary>
+        </member>
+        <member name="M:JetBrains.ReSharper.Features.Intellisense.Resources.FeaturesIntellisenseThemedIcons.IntellisenseGeneral.GetThemeImages">
+            <summary>Returns the set of theme images for Themed Icon IntellisenseGeneral.</summary>
+        </member>
+        <member name="T:JetBrains.ReSharper.Features.Intellisense.Resources.FeaturesIntellisenseThemedIcons.IntellisensePage">
+             <summary>
+            	<para>
+            		<para>IntellisensePage Themed Icon generated identifiers:</para>
+            		<para>— <see cref="T:JetBrains.ReSharper.Features.Intellisense.Resources.FeaturesIntellisenseThemedIcons.IntellisensePage"></see> identifier class, for use in attributes, XAML, and generic parameters;</para>
+            		<para>— <see cref="F:JetBrains.ReSharper.Features.Intellisense.Resources.FeaturesIntellisenseThemedIcons.IntellisensePage.Id"></see> identifier object, as a field in the identifier class, for use where an <see cref="T:JetBrains.UI.Icons.IconId"></see> value is expected.</para>
+            		<para>
+            			<code>
+                         .-_,"",_-.          
+                      .,="-.````.-"="'       
+                     ";_`           -;~`     
+                   `;!.              `=!`    
+                   ^+_  ````````````  -+=    
+                   \r` ``````````````  rr    
+                   =c- `...\L__L\...` .c!    
+                   `Tr` `.''+oo+'''`  +T-    
+                    .)|_  `--oo--`  -LT-     
+                      ^tT  --oo--  |t=`      
+                       ]]          ]]        
+                       DD`'_^=+cluk6X        
+                       OD.'_^=+cluk6h        
+                       cDr'_^=+cluU6|        
+                        TDo+==+Tuh9T`        
+                         -rk4AGher-          
+            </code>
+            		</para>
+            	</para>
+            </summary>
+            <remarks>
+            	<para>For details on Themed Icons and their use, see Remarks on the outer class.</para>
+            </remarks>
+            <example>
+            	<code>&lt;Image Source="{icons:ThemedIcon myres:FeaturesIntellisenseThemedIcons+IntellisensePage}" /&gt;        &lt;!-- XAML --&gt;</code>
+            </example>
+            <example>
+            	<code>[Item(Name="Sample", Icon=typeof(FeaturesIntellisenseThemedIcons.IntellisensePage))]        // C# Type attribute</code>
+            </example>
+            <example>
+            	<code>IconId iconid = FeaturesIntellisenseThemedIcons.IntellisensePage.Id;        // IconId identifier object</code>
+            </example>
+            <example>
+            	<code>themediconmanager.GetIcon&lt;FeaturesIntellisenseThemedIcons.IntellisensePage&gt;()        // Icon image for rendering</code>
+            </example>
+        </member>
+        <member name="F:JetBrains.ReSharper.Features.Intellisense.Resources.FeaturesIntellisenseThemedIcons.IntellisensePage.Id">
+            <inheritdoc cref="T:JetBrains.ReSharper.Features.Intellisense.Resources.FeaturesIntellisenseThemedIcons.IntellisensePage">identifier class</inheritdoc>
+        </member>
+        <member name="M:JetBrains.ReSharper.Features.Intellisense.Resources.FeaturesIntellisenseThemedIcons.IntellisensePage.Load_Color">
+            <summary>Loads the image for Themed Icon IntellisensePage theme aspect Color.</summary>
+        </member>
+        <member name="M:JetBrains.ReSharper.Features.Intellisense.Resources.FeaturesIntellisenseThemedIcons.IntellisensePage.Load_Gray">
+            <summary>Loads the image for Themed Icon IntellisensePage theme aspect Gray.</summary>
+        </member>
+        <member name="M:JetBrains.ReSharper.Features.Intellisense.Resources.FeaturesIntellisenseThemedIcons.IntellisensePage.Load_GrayDark">
+            <summary>Loads the image for Themed Icon IntellisensePage theme aspect GrayDark.</summary>
+        </member>
+        <member name="M:JetBrains.ReSharper.Features.Intellisense.Resources.FeaturesIntellisenseThemedIcons.IntellisensePage.GetThemeImages">
+            <summary>Returns the set of theme images for Themed Icon IntellisensePage.</summary>
+        </member>
+        <member name="T:JetBrains.ReSharper.Features.Intellisense.Resources.FeaturesIntellisenseThemedIcons.NuGetIntelliSenseItem">
+             <summary>
+            	<para>
+            		<para>NuGetIntelliSenseItem Themed Icon generated identifiers:</para>
+            		<para>— <see cref="T:JetBrains.ReSharper.Features.Intellisense.Resources.FeaturesIntellisenseThemedIcons.NuGetIntelliSenseItem"></see> identifier class, for use in attributes, XAML, and generic parameters;</para>
+            		<para>— <see cref="F:JetBrains.ReSharper.Features.Intellisense.Resources.FeaturesIntellisenseThemedIcons.NuGetIntelliSenseItem.Id"></see> identifier object, as a field in the identifier class, for use where an <see cref="T:JetBrains.UI.Icons.IconId"></see> value is expected.</para>
+            		<para>
+            			<code>
+              .+oZZeL-                       
+             =#Z)/!cVR+                      
+             ED/~~~~=D#                      
+             +DV?!;roD2;t26RDDDDDDR62t+.     
+              :JbDDXXDDZl?\!======;\?7EDa-   
+                   'dGc~-``'^;;;;;;;;;;rHR"  
+                   o87!`     !!!!!!!!!!!c8k  
+                   D8//~.  `"////////////88  
+                   88*********;_````_=***88  
+                   %%++++++++"        _++%%  
+                   WWrrrrrrrr`         rrWW  
+                   5M}???????,        _?7Mb  
+                   "%D7ccccccc!-`   -=cTOM;  
+                    -bM6Ii))))))))))ixX8R"   
+                      :s6R$$$$$$$$$$Dw}"     
+                                             
+            </code>
+            		</para>
+            	</para>
+            </summary>
+            <remarks>
+            	<para>For details on Themed Icons and their use, see Remarks on the outer class.</para>
+            </remarks>
+            <example>
+            	<code>&lt;Image Source="{icons:ThemedIcon myres:FeaturesIntellisenseThemedIcons+NuGetIntelliSenseItem}" /&gt;        &lt;!-- XAML --&gt;</code>
+            </example>
+            <example>
+            	<code>[Item(Name="Sample", Icon=typeof(FeaturesIntellisenseThemedIcons.NuGetIntelliSenseItem))]        // C# Type attribute</code>
+            </example>
+            <example>
+            	<code>IconId iconid = FeaturesIntellisenseThemedIcons.NuGetIntelliSenseItem.Id;        // IconId identifier object</code>
+            </example>
+            <example>
+            	<code>themediconmanager.GetIcon&lt;FeaturesIntellisenseThemedIcons.NuGetIntelliSenseItem&gt;()        // Icon image for rendering</code>
+            </example>
+        </member>
+        <member name="F:JetBrains.ReSharper.Features.Intellisense.Resources.FeaturesIntellisenseThemedIcons.NuGetIntelliSenseItem.Id">
+            <inheritdoc cref="T:JetBrains.ReSharper.Features.Intellisense.Resources.FeaturesIntellisenseThemedIcons.NuGetIntelliSenseItem">identifier class</inheritdoc>
+        </member>
+        <member name="M:JetBrains.ReSharper.Features.Intellisense.Resources.FeaturesIntellisenseThemedIcons.NuGetIntelliSenseItem.Load_Color">
+            <summary>Loads the image for Themed Icon NuGetIntelliSenseItem theme aspect Color.</summary>
+        </member>
+        <member name="M:JetBrains.ReSharper.Features.Intellisense.Resources.FeaturesIntellisenseThemedIcons.NuGetIntelliSenseItem.Load_Gray">
+            <summary>Loads the image for Themed Icon NuGetIntelliSenseItem theme aspect Gray.</summary>
+        </member>
+        <member name="M:JetBrains.ReSharper.Features.Intellisense.Resources.FeaturesIntellisenseThemedIcons.NuGetIntelliSenseItem.Load_GrayDark">
+            <summary>Loads the image for Themed Icon NuGetIntelliSenseItem theme aspect GrayDark.</summary>
+        </member>
+        <member name="M:JetBrains.ReSharper.Features.Intellisense.Resources.FeaturesIntellisenseThemedIcons.NuGetIntelliSenseItem.GetThemeImages">
+            <summary>Returns the set of theme images for Themed Icon NuGetIntelliSenseItem.</summary>
+        </member>
+        <member name="T:JetBrains.ReSharper.Features.Intellisense.Resources.FeaturesIntellisenseThemedIcons.ParameterInfoPage">
+             <summary>
+            	<para>
+            		<para>ParameterInfoPage Themed Icon generated identifiers:</para>
+            		<para>— <see cref="T:JetBrains.ReSharper.Features.Intellisense.Resources.FeaturesIntellisenseThemedIcons.ParameterInfoPage"></see> identifier class, for use in attributes, XAML, and generic parameters;</para>
+            		<para>— <see cref="F:JetBrains.ReSharper.Features.Intellisense.Resources.FeaturesIntellisenseThemedIcons.ParameterInfoPage.Id"></see> identifier object, as a field in the identifier class, for use where an <see cref="T:JetBrains.UI.Icons.IconId"></see> value is expected.</para>
+            		<para>
+            			<code>
+                         -!?7CCCCCCCC7L!_    
+                       `)C~.`        ``^{7`  
+                       ru_ ```````````` .uT  
+                       ee  ````````````  ee  
+                .tKKKK=yy````````````````yy  
+               =E3_+X! tk_``````````````-ke  
+              |6c."6l  -y5='```  `````.~oV6t 
+             ~wt..ow-   `=7XX.. `."tXX66!-)w/
+             iw~'-w6       99..."f9T' uw,',wu
+             kb_-^bu       bb'^1bi-   7b;--bb
+             FH~-_H9       AAAAl-     jH^-"HV
+             !At__EA'                 pH__(A?
+              uR)_+Rl                +R|_+Ok 
+               LRa~FR=              _R5^IRl` 
+                ,wDDDR^            _#DDDb~   
+                                             
+            </code>
+            		</para>
+            	</para>
+            </summary>
+            <remarks>
+            	<para>For details on Themed Icons and their use, see Remarks on the outer class.</para>
+            </remarks>
+            <example>
+            	<code>&lt;Image Source="{icons:ThemedIcon myres:FeaturesIntellisenseThemedIcons+ParameterInfoPage}" /&gt;        &lt;!-- XAML --&gt;</code>
+            </example>
+            <example>
+            	<code>[Item(Name="Sample", Icon=typeof(FeaturesIntellisenseThemedIcons.ParameterInfoPage))]        // C# Type attribute</code>
+            </example>
+            <example>
+            	<code>IconId iconid = FeaturesIntellisenseThemedIcons.ParameterInfoPage.Id;        // IconId identifier object</code>
+            </example>
+            <example>
+            	<code>themediconmanager.GetIcon&lt;FeaturesIntellisenseThemedIcons.ParameterInfoPage&gt;()        // Icon image for rendering</code>
+            </example>
+        </member>
+        <member name="F:JetBrains.ReSharper.Features.Intellisense.Resources.FeaturesIntellisenseThemedIcons.ParameterInfoPage.Id">
+            <inheritdoc cref="T:JetBrains.ReSharper.Features.Intellisense.Resources.FeaturesIntellisenseThemedIcons.ParameterInfoPage">identifier class</inheritdoc>
+        </member>
+        <member name="M:JetBrains.ReSharper.Features.Intellisense.Resources.FeaturesIntellisenseThemedIcons.ParameterInfoPage.Load_Color">
+            <summary>Loads the image for Themed Icon ParameterInfoPage theme aspect Color.</summary>
+        </member>
+        <member name="M:JetBrains.ReSharper.Features.Intellisense.Resources.FeaturesIntellisenseThemedIcons.ParameterInfoPage.Load_Gray">
+            <summary>Loads the image for Themed Icon ParameterInfoPage theme aspect Gray.</summary>
+        </member>
+        <member name="M:JetBrains.ReSharper.Features.Intellisense.Resources.FeaturesIntellisenseThemedIcons.ParameterInfoPage.Load_GrayDark">
+            <summary>Loads the image for Themed Icon ParameterInfoPage theme aspect GrayDark.</summary>
+        </member>
+        <member name="M:JetBrains.ReSharper.Features.Intellisense.Resources.FeaturesIntellisenseThemedIcons.ParameterInfoPage.GetThemeImages">
+            <summary>Returns the set of theme images for Themed Icon ParameterInfoPage.</summary>
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,329 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+CSS Scroll Snap Module Level 1
+W3C Candidate Recommendation, 20 October 2016
+https://www.w3.org/TR/2016/CR-css-scroll-snap-1-20161020/
+-->
+<definitions xmlns="urn:schemas-jetbrains-com:css-xml">
+  <property id="scroll-snap-type" declared-in="3.0" url="https://www.w3.org/TR/css-scroll-snap-1/#propdef-scroll-snap-type" applies="all elements" initial="none" inherited="no" percentage="n/a" media="interactive" animatable="no" caniuse-ids="css-snappoints">
+    <description><![CDATA[
+      <p>The scroll-snap-type property specifies whether a scroll container is a scroll snap container, how strictly it snaps, and which
+        axes are considered. If no strictness value is specified, proximity is assumed.</p>
+      ]]></description>
+    <group type="or">
+      <name value="none" tooltip="If specified on a scroll container, the scroll container must not snap." />
+      <group>
+        <group type="or">
+          <name value="x" tooltip="The scroll container snaps to snap positions in its horizontal axis only." />
+          <name value="y" tooltip="The scroll container snaps to snap positions in its vertical axis only." />
+          <name value="block" tooltip="The scroll container snaps to snap positions in its block axis only." />
+          <name value="inline" tooltip="The scroll container snaps to snap positions in its inline axis only." />
+          <name value="both" tooltip="The scroll container snaps to snap positions in both of its axes independently (potentially snapping to different elements in each axis)." />
+        </group>
+        <group type="or" min="0">
+          <name value="mandatory" tooltip="If specified on a scroll container, the scroll container is required to be snapped to a snap position when there are no active scrolling operations. If a reachable snap position exists then the scroll container must snap at the termination of a scroll (if none exist then no snapping occurs)." />
+          <name value="proximity" tooltip="If specified on a scroll container, the scroll container may snap to a snap position at the termination of a scroll, at the discretion of the UA given the parameters of the scroll." />
+        </group>
+      </group>
+      <inline id="wide-keywords" inline="yes" />
+    </group>
+  </property>
+  <prefixed-property id="scroll-snap-type" prefix="webkit" browsers="S9.0" url="https://developer.apple.com/library/prerelease/mac/releasenotes/General/WhatsNewInSafari/Articles/Safari_9.html#//apple_ref/doc/uid/TP40014305-CH9-SW28" />
+  <property id="scroll-padding" declared-in="3.0" url="https://www.w3.org/TR/css-scroll-snap-1/#propdef-scroll-padding" applies="scroll containers" initial="0" inherited="no" percentage="relative to the corresponding dimension of the scroll container’s scrollport" media="interactive" animatable="yes" caniuse-ids="css-snappoints">
+    <description><![CDATA[
+      <p>The scroll-padding property defines the <strong>optimal viewing region</strong> of the scrollport, the region used as the target
+        region for placing things in view of the user. It allows the author to exclude regions of the scrollport that are obscured by other
+        content (such as fixed-positioned toolbars or sidebars) or simply to put more breathing room between a targetted element and the
+        edges of the scrollport.</p>
+      ]]></description>
+    <group type="or">
+      <group type="or" max="4">
+        <length />
+        <percentage />
+      </group>
+      <inline id="wide-keywords" inline="yes" />
+    </group>
+  </property>
+  <property id="scroll-snap-margin" declared-in="3.0" url="https://www.w3.org/TR/css-scroll-snap-1/#propdef-scroll-snap-margin" applies="all elements" initial="0" inherited="no" percentage="n/a" media="interactive" animatable="yes" caniuse-ids="css-snappoints">
+    <description><![CDATA[
+      <p>The scroll-snap-margin property defines the <strong>scroll snap area</strong> that is used for snapping this box to the snapport.
+        The &lt;length&gt; values give outsets (interpreted as for
+        <see cref="P:margin"/> or
+        <see cref="P:border-image-outset"/>). The scroll snap area is the rectangular bounding box of the transformed border box, plus the
+        specified outsets, axis-aligned in the scroll container’s coordinate space.</p>
+      ]]></description>
+    <group type="or">
+      <length max="4" />
+      <inline id="wide-keywords" inline="yes" />
+    </group>
+  </property>
+  <property id="scroll-snap-align" declared-in="3.0" url="https://www.w3.org/TR/css-scroll-snap-1/#propdef-scroll-snap-align" applies="all elements" initial="none" inherited="no" percentage="n/a" media="interactive" animatable="no" caniuse-ids="css-snappoints">
+    <description><![CDATA[
+      <p>The scroll-snap-align property specifies the box’s snap position as an alignment of its snap area (as the alignment subject) within
+        its snap container’s snapport (as the alignment container). The two values specify the snapping alignment in the inline axis and
+        block axis, respectively. If only one value is specified, the second value defaults to the same value.</p>
+      ]]></description>
+    <group type="or">
+      <group type="or" max="2">
+        <name value="none" tooltip="This box does not define a snap position in the specified axis." />
+        <name value="start" tooltip="Start alignment of this box’s scroll snap area within the scroll container’s snapport is a snap position in the specified axis." />
+        <name value="end" tooltip="End alignment of this box’s scroll snap area within the scroll container’s snapport is a snap position in the specified axis." />
+        <name value="center" tooltip="Center alignment of this box’s scroll snap area within the scroll container’s snapport is a snap position in the specified axis." />
+      </group>
+      <inline id="wide-keywords" inline="yes" />
+    </group>
+  </property>
+  <property id="scroll-snap-stop" declared-in="3.0" url="https://www.w3.org/TR/css-scroll-snap-1/#propdef-scroll-snap-stop" applies="all elements" initial="normal" inherited="no" percentage="n/a" media="interactive" animatable="no" caniuse-ids="css-snappoints">
+    <description><![CDATA[
+      <p>This property specifies whether the scroll container must stop at each snap position it passes, or may pass multiple snap positions
+        before coming to rest. Values are defined as follows:</p>
+      ]]></description>
+    <group type="or">
+      <name value="normal" tooltip="The scroll container may pass by a snap position defined by this element during the execution of a scrolling operation." />
+      <name value="always" tooltip="The scroll container must not pass by a snap position defined by this element during the execution of a scrolling operation." />
+      <inline id="wide-keywords" inline="yes" />
+    </group>
+  </property>
+  <property id="scroll-padding-top" declared-in="3.0" url="https://www.w3.org/TR/css-scroll-snap-1/#propdef-scroll-padding-top" applies="scroll containers" initial="0" inherited="no" percentage="relative to the scroll container’s scrollport" media="interactive" animatable="yes" caniuse-ids="css-snappoints">
+    <description><![CDATA[
+      <p>These longhands of
+        <see cref="P:scroll-padding"/> specify the top, right, bottom, and left edges of the snapport, respectively.</p>
+      ]]></description>
+    <group type="or">
+      <length />
+      <percentage />
+      <inline id="wide-keywords" inline="yes" />
+    </group>
+  </property>
+  <property id="scroll-padding-right" declared-in="3.0" url="https://www.w3.org/TR/css-scroll-snap-1/#propdef-scroll-padding-right" applies="scroll containers" initial="0" inherited="no" percentage="relative to the scroll container’s scrollport" media="interactive" animatable="yes" caniuse-ids="css-snappoints">
+    <description><![CDATA[
+      <p>These longhands of
+        <see cref="P:scroll-padding"/> specify the top, right, bottom, and left edges of the snapport, respectively.</p>
+      ]]></description>
+    <group type="or">
+      <length />
+      <percentage />
+      <inline id="wide-keywords" inline="yes" />
+    </group>
+  </property>
+  <property id="scroll-padding-bottom" declared-in="3.0" url="https://www.w3.org/TR/css-scroll-snap-1/#propdef-scroll-padding-bottom" applies="scroll containers" initial="0" inherited="no" percentage="relative to the scroll container’s scrollport" media="interactive" animatable="yes" caniuse-ids="css-snappoints">
+    <description><![CDATA[
+      <p>These longhands of
+        <see cref="P:scroll-padding"/> specify the top, right, bottom, and left edges of the snapport, respectively.</p>
+      ]]></description>
+    <group type="or">
+      <length />
+      <percentage />
+      <inline id="wide-keywords" inline="yes" />
+    </group>
+  </property>
+  <property id="scroll-padding-left" declared-in="3.0" url="https://www.w3.org/TR/css-scroll-snap-1/#propdef-scroll-padding-left" applies="scroll containers" initial="0" inherited="no" percentage="relative to the scroll container’s scrollport" media="interactive" animatable="yes" caniuse-ids="css-snappoints">
+    <description><![CDATA[
+      <p>These longhands of
+        <see cref="P:scroll-padding"/> specify the top, right, bottom, and left edges of the snapport, respectively.</p>
+      ]]></description>
+    <group type="or">
+      <length />
+      <percentage />
+      <inline id="wide-keywords" inline="yes" />
+    </group>
+  </property>
+  <property id="scroll-padding-inline-start" declared-in="3.0" url="https://www.w3.org/TR/css-scroll-snap-1/#propdef-scroll-padding-inline-start" applies="scroll containers" initial="0" inherited="no" percentage="relative to the scroll container’s scrollport" media="interactive" animatable="yes" caniuse-ids="css-snappoints">
+    <description><![CDATA[
+      <p>These longhands of
+        <see cref="P:scroll-padding"/> specify the block-start, inline-start, block-end, and inline-end edges of the snapport, respectively.
+      </p>
+      ]]></description>
+    <group type="or">
+      <length />
+      <percentage />
+      <inline id="wide-keywords" inline="yes" />
+    </group>
+  </property>
+  <property id="scroll-padding-block-start" declared-in="3.0" url="https://www.w3.org/TR/css-scroll-snap-1/#propdef-scroll-padding-block-start" applies="scroll containers" initial="0" inherited="no" percentage="relative to the scroll container’s scrollport" media="interactive" animatable="yes" caniuse-ids="css-snappoints">
+    <description><![CDATA[
+      <p>These longhands of
+        <see cref="P:scroll-padding"/> specify the block-start, inline-start, block-end, and inline-end edges of the snapport, respectively.
+      </p>
+      ]]></description>
+    <group type="or">
+      <length />
+      <percentage />
+      <inline id="wide-keywords" inline="yes" />
+    </group>
+  </property>
+  <property id="scroll-padding-inline-end" declared-in="3.0" url="https://www.w3.org/TR/css-scroll-snap-1/#propdef-scroll-padding-inline-end" applies="scroll containers" initial="0" inherited="no" percentage="relative to the scroll container’s scrollport" media="interactive" animatable="yes" caniuse-ids="css-snappoints">
+    <description><![CDATA[
+      <p>These longhands of
+        <see cref="P:scroll-padding"/> specify the block-start, inline-start, block-end, and inline-end edges of the snapport, respectively.
+      </p>
+      ]]></description>
+    <group type="or">
+      <length />
+      <percentage />
+      <inline id="wide-keywords" inline="yes" />
+    </group>
+  </property>
+  <property id="scroll-padding-block-end" declared-in="3.0" url="https://www.w3.org/TR/css-scroll-snap-1/#propdef-scroll-padding-block-end" applies="scroll containers" initial="0" inherited="no" percentage="relative to the scroll container’s scrollport" media="interactive" animatable="yes" caniuse-ids="css-snappoints">
+    <description><![CDATA[
+      <p>These longhands of
+        <see cref="P:scroll-padding"/> specify the block-start, inline-start, block-end, and inline-end edges of the snapport, respectively.
+      </p>
+      ]]></description>
+    <group type="or">
+      <length />
+      <percentage />
+      <inline id="wide-keywords" inline="yes" />
+    </group>
+  </property>
+  <!-- todo: shorthand -->
+  <property id="scroll-padding-block" declared-in="3.0" url="https://www.w3.org/TR/css-scroll-snap-1/#propdef-scroll-padding-block" applies="all elements" initial="0" inherited="no" percentage="relative to the scroll container’s scrollport" media="interactive" animatable="yes" caniuse-ids="css-snappoints">
+    <description><![CDATA[
+      <p>These shorthands of
+        <see cref="P:scroll-padding-block-start"/> +
+        <see cref="P:scroll-padding-block-end"/> and
+        <see cref="P:scroll-padding-inline-start"/> +
+        <see cref="P:scroll-padding-inline-end"/> are longhands of
+        <see cref="P:scroll-padding"/>, and specify the block-axis and inline-axis edges of the snapport, respectively.</p>
+      ]]></description>
+    <group type="or">
+      <group type="or" max="2">
+        <length />
+        <percentage />
+      </group>
+      <inline id="wide-keywords" inline="yes" />
+    </group>
+  </property>
+  <!-- todo: shorthand -->
+  <property id="scroll-padding-inline" declared-in="3.0" url="https://www.w3.org/TR/css-scroll-snap-1/#propdef-scroll-padding-inline" applies="all elements" initial="0" inherited="no" percentage="relative to the scroll container’s scrollport" media="interactive" animatable="yes" caniuse-ids="css-snappoints">
+    <description><![CDATA[
+      <p>These shorthands of
+        <see cref="P:scroll-padding-block-start"/> +
+        <see cref="P:scroll-padding-block-end"/> and
+        <see cref="P:scroll-padding-inline-start"/> +
+        <see cref="P:scroll-padding-inline-end"/> are longhands of
+        <see cref="P:scroll-padding"/>, and specify the block-axis and inline-axis edges of the snapport, respectively.</p>
+      ]]></description>
+    <group type="or">
+      <group type="or" max="2">
+        <length />
+        <percentage />
+      </group>
+      <inline id="wide-keywords" inline="yes" />
+    </group>
+  </property>
+  <property id="scroll-snap-margin-top" declared-in="3.0" url="https://www.w3.org/TR/css-scroll-snap-1/#propdef-scroll-snap-margin-top" applies="all elements" initial="0" inherited="no" percentage="n/a" media="interactive" animatable="yes" caniuse-ids="css-snappoints">
+    <description><![CDATA[
+      <p>These longhands of
+        <see cref="P:scroll-snap-margin"/> specify the top, right, bottom, and left edges of the scroll snap area, respectively.</p>
+      ]]></description>
+    <group type="or">
+      <length />
+      <inline id="wide-keywords" inline="yes" />
+    </group>
+  </property>
+  <property id="scroll-snap-margin-right" declared-in="3.0" url="https://www.w3.org/TR/css-scroll-snap-1/#propdef-scroll-snap-margin-right" applies="all elements" initial="0" inherited="no" percentage="n/a" media="interactive" animatable="yes" caniuse-ids="css-snappoints">
+    <description><![CDATA[
+      <p>These longhands of
+        <see cref="P:scroll-snap-margin"/> specify the top, right, bottom, and left edges of the scroll snap area, respectively.</p>
+      ]]></description>
+    <group type="or">
+      <length />
+      <inline id="wide-keywords" inline="yes" />
+    </group>
+  </property>
+  <property id="scroll-snap-margin-bottom" declared-in="3.0" url="https://www.w3.org/TR/css-scroll-snap-1/#propdef-scroll-snap-margin-bottom" applies="all elements" initial="0" inherited="no" percentage="n/a" media="interactive" animatable="yes" caniuse-ids="css-snappoints">
+    <description><![CDATA[
+      <p>These longhands of
+        <see cref="P:scroll-snap-margin"/> specify the top, right, bottom, and left edges of the scroll snap area, respectively.</p>
+      ]]></description>
+    <group type="or">
+      <length />
+      <inline id="wide-keywords" inline="yes" />
+    </group>
+  </property>
+  <property id="scroll-snap-margin-left" declared-in="3.0" url="https://www.w3.org/TR/css-scroll-snap-1/#propdef-scroll-snap-margin-left" applies="all elements" initial="0" inherited="no" percentage="n/a" media="interactive" animatable="yes" caniuse-ids="css-snappoints">
+    <description><![CDATA[
+      <p>These longhands of
+        <see cref="P:scroll-snap-margin"/> specify the top, right, bottom, and left edges of the scroll snap area, respectively.</p>
+      ]]></description>
+    <group type="or">
+      <length />
+      <inline id="wide-keywords" inline="yes" />
+    </group>
+  </property>
+  <property id="scroll-snap-margin-block-start" declared-in="3.0" url="https://www.w3.org/TR/css-scroll-snap-1/#propdef-scroll-snap-margin-block-start" applies="all elements" initial="0" inherited="no" percentage="n/a" media="interactive" animatable="yes" caniuse-ids="css-snappoints">
+    <description><![CDATA[
+      <p>These longhands of
+        <see cref="P:scroll-snap-margin"/> specify the block-start, inline-start, block-end, and inline-end edges of the scroll snap area,
+        respectively.</p>
+      ]]></description>
+    <group type="or">
+      <length />
+      <inline id="wide-keywords" inline="yes" />
+    </group>
+  </property>
+  <property id="scroll-snap-margin-inline-start" declared-in="3.0" url="https://www.w3.org/TR/css-scroll-snap-1/#propdef-scroll-snap-margin-inline-start" applies="all elements" initial="0" inherited="no" percentage="n/a" media="interactive" animatable="yes" caniuse-ids="css-snappoints">
+    <description><![CDATA[
+      <p>These longhands of
+        <see cref="P:scroll-snap-margin"/> specify the block-start, inline-start, block-end, and inline-end edges of the scroll snap area,
+        respectively.</p>
+      ]]></description>
+    <group type="or">
+      <length />
+      <inline id="wide-keywords" inline="yes" />
+    </group>
+  </property>
+  <property id="scroll-snap-margin-block-end" declared-in="3.0" url="https://www.w3.org/TR/css-scroll-snap-1/#propdef-scroll-snap-margin-block-end" applies="all elements" initial="0" inherited="no" percentage="n/a" media="interactive" animatable="yes" caniuse-ids="css-snappoints">
+    <description><![CDATA[
+      <p>These longhands of
+        <see cref="P:scroll-snap-margin"/> specify the block-start, inline-start, block-end, and inline-end edges of the scroll snap area,
+        respectively.</p>
+      ]]></description>
+    <group type="or">
+      <length />
+      <inline id="wide-keywords" inline="yes" />
+    </group>
+  </property>
+  <property id="scroll-snap-margin-inline-end" declared-in="3.0" url="https://www.w3.org/TR/css-scroll-snap-1/#propdef-scroll-snap-margin-inline-end" applies="all elements" initial="0" inherited="no" percentage="n/a" media="interactive" animatable="yes" caniuse-ids="css-snappoints">
+    <description><![CDATA[
+      <p>These longhands of
+        <see cref="P:scroll-snap-margin"/> specify the block-start, inline-start, block-end, and inline-end edges of the scroll snap area,
+        respectively.</p>
+      ]]></description>
+    <group type="or">
+      <length />
+      <inline id="wide-keywords" inline="yes" />
+    </group>
+  </property>
+  <!-- todo: shorthand -->
+  <property id="scroll-snap-margin-block" declared-in="3.0" url="https://www.w3.org/TR/css-scroll-snap-1/#propdef-scroll-snap-margin-block" applies="all elements" initial="0" inherited="no" percentage="n/a" media="interactive" animatable="yes" caniuse-ids="css-snappoints">
+    <description><![CDATA[
+      <p>These shorthands of
+        <see cref="P:scroll-snap-margin-block-start"/> +
+        <see cref="P:scroll-snap-margin-block-end"/> and
+        <see cref="P:scroll-snap-margin-inline-start"/> +
+        <see cref="P:scroll-snap-margin-inline-end"/> are longhands of
+        <see cref="P:scroll-snap-margin"/>, and specify the block-axis and inline-axis edges of the scroll snap area, respectively.</p>
+      ]]></description>
+    <group type="or">
+      <length max="2" />
+      <inline id="wide-keywords" inline="yes" />
+    </group>
+  </property>
+  <!-- todo: shorthand -->
+  <property id="scroll-snap-margin-inline" declared-in="3.0" url="https://www.w3.org/TR/css-scroll-snap-1/#propdef-scroll-snap-margin-inline" applies="all elements" initial="0" inherited="no" percentage="n/a" media="interactive" animatable="yes" caniuse-ids="css-snappoints">
+    <description><![CDATA[
+      <p>These shorthands of
+        <see cref="P:scroll-snap-margin-block-start"/> +
+        <see cref="P:scroll-snap-margin-block-end"/> and
+        <see cref="P:scroll-snap-margin-inline-start"/> +
+        <see cref="P:scroll-snap-margin-inline-end"/> are longhands of
+        <see cref="P:scroll-snap-margin"/>, and specify the block-axis and inline-axis edges of the scroll snap area, respectively.</p>
+      ]]></description>
+    <group type="or">
+      <length max="2" />
+      <inline id="wide-keywords" inline="yes" />
+    </group>
+  </property>
+</definitions>

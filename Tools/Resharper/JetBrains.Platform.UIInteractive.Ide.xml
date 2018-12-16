@@ -1,0 +1,516 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>JetBrains.Platform.UIInteractive.Ide</name>
+    </assembly>
+    <members>
+        <member name="T:JetBrains.Platform.UIInteractive.Ide.Controls.ButtonControl">
+            <summary>
+            ButtonControl
+            </summary>
+        </member>
+        <member name="M:JetBrains.Platform.UIInteractive.Ide.Controls.ButtonControl.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:JetBrains.Platform.UIInteractive.Ide.Controls.CheckBoxViewControl">
+            <summary>
+            CheckBoxViewControl
+            </summary>
+        </member>
+        <member name="F:JetBrains.Platform.UIInteractive.Ide.Controls.CheckBoxViewControl.CheckBox">
+            <summary>
+            CheckBox Name Field
+            </summary>
+        </member>
+        <member name="M:JetBrains.Platform.UIInteractive.Ide.Controls.CheckBoxViewControl.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:JetBrains.Platform.UIInteractive.Ide.Controls.ComboBoxControl">
+            <summary>
+            ComboBoxControl
+            </summary>
+        </member>
+        <member name="M:JetBrains.Platform.UIInteractive.Ide.Controls.ComboBoxControl.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:JetBrains.Platform.UIInteractive.Ide.Controls.CustomComboBoxControl">
+            <summary>
+            CustomComboBoxControl
+            </summary>
+        </member>
+        <member name="M:JetBrains.Platform.UIInteractive.Ide.Controls.CustomComboBoxControl.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:JetBrains.Platform.UIInteractive.Ide.Controls.DialogControl">
+            <summary>
+            DialogControl
+            </summary>
+        </member>
+        <member name="M:JetBrains.Platform.UIInteractive.Ide.Controls.DialogControl.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:JetBrains.Platform.UIInteractive.Ide.Controls.HeaderControl">
+            <summary>
+            HeaderControl
+            </summary>
+        </member>
+        <member name="M:JetBrains.Platform.UIInteractive.Ide.Controls.HeaderControl.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:JetBrains.Platform.UIInteractive.Ide.Controls.IconToggleButtonControl">
+            <summary>
+            IconToggleButtonControl
+            </summary>
+        </member>
+        <member name="M:JetBrains.Platform.UIInteractive.Ide.Controls.IconToggleButtonControl.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:JetBrains.Platform.UIInteractive.Ide.Controls.LabelControl">
+            <summary>
+            LabelControl
+            </summary>
+        </member>
+        <member name="M:JetBrains.Platform.UIInteractive.Ide.Controls.LabelControl.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:JetBrains.Platform.UIInteractive.Ide.Controls.LinkButtonViewControl">
+            <summary>
+            LinkButtonViewControl
+            </summary>
+        </member>
+        <member name="M:JetBrains.Platform.UIInteractive.Ide.Controls.LinkButtonViewControl.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:JetBrains.Platform.UIInteractive.Ide.Controls.PathSelectionButtonViewControl">
+            <summary>
+            PathSelectionButtonViewControl
+            </summary>
+        </member>
+        <member name="M:JetBrains.Platform.UIInteractive.Ide.Controls.PathSelectionButtonViewControl.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:JetBrains.Platform.UIInteractive.Ide.Controls.RadioButtonControl">
+            <summary>
+            RadioButtonControl
+            </summary>
+        </member>
+        <member name="F:JetBrains.Platform.UIInteractive.Ide.Controls.RadioButtonControl.RadioButton">
+            <summary>
+            RadioButton Name Field
+            </summary>
+        </member>
+        <member name="M:JetBrains.Platform.UIInteractive.Ide.Controls.RadioButtonControl.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:JetBrains.Platform.UIInteractive.Ide.Controls.ToolbarButtonControl">
+            <summary>
+            ToolbarButtonControl
+            </summary>
+        </member>
+        <member name="M:JetBrains.Platform.UIInteractive.Ide.Controls.ToolbarButtonControl.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:JetBrains.Platform.UIInteractive.Ide.Controls.TreeControl">
+            <summary>
+            TreeControl
+            </summary>
+        </member>
+        <member name="M:JetBrains.Platform.UIInteractive.Ide.Controls.TreeControl.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="P:JetBrains.Platform.UIInteractive.Ide.Controls.Utils.NullToVisibilityConverter.Inverted">
+            <summary>
+            Gets or sets whether bool value should be inverted before convering
+            </summary>
+        </member>
+        <member name="P:JetBrains.Platform.UIInteractive.Ide.Controls.Utils.NullToVisibilityConverter.NonVisibleValue">
+            <summary>
+            Gets or sets a value used for hidden case
+            </summary>
+        </member>
+        <member name="M:JetBrains.Platform.UIInteractive.Ide.Controls.Utils.NullToVisibilityConverter.Convert(System.Object,System.Type,System.Object,System.Globalization.CultureInfo)">
+            <summary>
+            Converts a value. 
+            </summary>
+            <returns>
+            A converted value. If the method returns null, the valid null value is used.
+            </returns>
+            <param name="value">The value produced by the binding source.</param>
+            <param name="targetType">The type of the binding target property.</param>
+            <param name="parameter">The converter parameter to use.</param>
+            <param name="culture">The culture to use in the converter.</param>
+        </member>
+        <member name="M:JetBrains.Platform.UIInteractive.Ide.Controls.Utils.NullToVisibilityConverter.ConvertBack(System.Object,System.Type,System.Object,System.Globalization.CultureInfo)">
+            <summary>
+            Converts a value. 
+            </summary>
+            <returns>
+            A converted value. If the method returns null, the valid null value is used.
+            </returns>
+            <param name="value">The value that is produced by the binding target.</param>
+            <param name="targetType">The type to convert to.</param>
+            <param name="parameter">The converter parameter to use.</param>
+            <param name="culture">The culture to use in the converter.</param>
+        </member>
+        <member name="T:JetBrains.Platform.UIInteractive.Ide.Controls.RichTextControl">
+            <summary>
+            RichTextControl
+            </summary>
+        </member>
+        <member name="M:JetBrains.Platform.UIInteractive.Ide.Controls.RichTextControl.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:JetBrains.Platform.UIInteractive.Ide.Controls.TextControlViewControl">
+            <summary>
+            TextControlViewControl
+            </summary>
+        </member>
+        <member name="M:JetBrains.Platform.UIInteractive.Ide.Controls.TextControlViewControl.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:JetBrains.Platform.UIInteractive.Ide.ResultList.UIResultListPublisherBehavior">
+            <summary>
+            Binds a UI control to its <see cref="T:JetBrains.IDE.ResultList.UIResultListPublisherAutomation" />.
+            </summary>
+        </member>
+        <member name="M:JetBrains.Platform.UIInteractive.Ide.ResultList.UIResultListPublisherBehavior.BindToWinForms(JetBrains.DataFlow.Lifetime,JetBrains.IDE.ResultList.UIResultListPublisherAutomation,System.Windows.Forms.Control,JetBrains.Application.Interop.NativeHook.IWindowsHookManager,JetBrains.Application.UI.Components.IUIApplication)">
+            <summary>
+            Attaches the result list behavior to a WinForms view.
+            </summary>
+        </member>
+        <member name="M:JetBrains.Platform.UIInteractive.Ide.TreeBrowser.Exporting.TreeModelCellPresentersExportBase.ProcessTreeModelNode(System.Int32,JetBrains.Application.UI.TreeModels.TreeModelNode,JetBrains.Application.Progress.IProgressIndicator)">
+            <summary>
+            Process tree model node w/ custom logic
+            </summary>
+            <param name="level">Level of tree node (root's nodes have level 0)</param>
+            <param name="treeModelNode">Current processed node</param>
+            <param name="progress">Progress indicator to track processing progress</param>
+        </member>
+        <member name="M:JetBrains.Platform.UIInteractive.Ide.TreeBrowser.Exporting.TreeModelCellPresentersExportBase.ProcessCellPresentations(System.Int32,JetBrains.Application.UI.TreeModels.TreeModelNode,JetBrains.Application.UI.Controls.Utils.IPresentableItem[],JetBrains.Application.Progress.IProgressIndicator)">
+            <summary>
+            Process presentation of tree model node node w/ custom logic
+            </summary>
+            <param name="level">Level of tree node (root's nodes have level 0)</param>
+            <param name="treeModelNode"></param>
+            <param name="cells">Presentaions of the node's cells</param>
+            <param name="progress">Progress indicator to track processing progress</param>
+        </member>
+        <member name="M:JetBrains.Platform.UIInteractive.Ide.TreeBrowser.Exporting.TreeModelVisitor.VisitTreeModelNode(System.Int32,JetBrains.Application.UI.TreeModels.TreeModelNode,JetBrains.Application.Progress.IProgressIndicator)">
+            <summary>
+            Recursive tree model node visiting method
+            </summary>
+            <param name="level">Level of tree node (root's nodes have level 0)</param>
+            <param name="treeModelNode">Current visiting node</param>
+            <param name="progress">Progress indicator to track processing progress</param>
+        </member>
+        <member name="M:JetBrains.Platform.UIInteractive.Ide.TreeBrowser.Exporting.TreeModelVisitor.ProcessTreeModelNode(System.Int32,JetBrains.Application.UI.TreeModels.TreeModelNode,JetBrains.Application.Progress.IProgressIndicator)">
+            <summary>
+            Process tree model node w/ custom logic
+            </summary>
+            <param name="level">Level of tree node (root's nodes have level 0)</param>
+            <param name="treeModelNode">Current processed node</param>
+            <param name="progress">Progress indicator to track processing progress</param>
+        </member>
+        <member name="M:JetBrains.Platform.UIInteractive.Ide.TreeBrowser.Exporting.TreeModelVisitor.Process(JetBrains.Application.UI.TreeModels.TreeModel,System.Collections.Generic.IList{JetBrains.Application.UI.TreeModels.TreeModelNode},JetBrains.Application.Progress.IProgressIndicator,System.Boolean)">
+            <summary>
+            Invokes main processing
+            </summary>
+            <param name="treeModel">Tree model</param>
+            <param name="treeModelNodes">Processed nodes (TreeModel.Roots in case of whole model processing)</param>
+            <param name="progress">Progress indicator to track processing progress</param>
+            <param name="recursively">Should it be processed recursively</param>
+        </member>
+        <member name="M:JetBrains.Platform.UIInteractive.Ide.TreeBrowser.Exporting.TreeModelVisitor.CheckTreeNodeIsTemp(JetBrains.Application.UI.TreeModels.TreeModelNode)">
+            <summary>
+            Check if tree node is temp. It's actual for async trees.
+            </summary>
+            <param name="treeModelNode">Current processed node</param>
+            <returns>Result</returns>
+        </member>
+        <member name="F:JetBrains.Platform.UIInteractive.Ide.TreeBrowser.ExportTreeViewDialog.components">
+            <summary>Required designer variable.</summary>
+        </member>
+        <member name="M:JetBrains.Platform.UIInteractive.Ide.TreeBrowser.ExportTreeViewDialog.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+        </member>
+        <member name="M:JetBrains.Platform.UIInteractive.Ide.TreeBrowser.ExportTreeViewDialog.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:JetBrains.Platform.UIInteractive.Ide.TreeBrowser.ExportTreeViewResources">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:JetBrains.Platform.UIInteractive.Ide.TreeBrowser.ExportTreeViewResources.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:JetBrains.Platform.UIInteractive.Ide.TreeBrowser.ExportTreeViewResources.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+        <member name="P:JetBrains.Platform.UIInteractive.Ide.TreeGridBrowser.LocallyPendedActionQueue.PendedActionScheduler">
+            <summary>
+            Gets or sets an optional custom scheduler
+            </summary>
+        </member>
+        <member name="T:JetBrains.Platform.UIInteractive.Ide.TreeGridBrowser.NodeCheckedStateChangedEventArgs">
+            <summary>
+            Arguments for handler of checked state of <see cref="T:JetBrains.Application.UI.TreeModels.TreeModelNode"/> changed
+            </summary>
+        </member>
+        <member name="T:JetBrains.Platform.UIInteractive.Ide.TreeGridBrowser.NodeCheckedStateChangedEventHandler">
+            <summary>
+            Handler of checked state of <see cref="T:JetBrains.Application.UI.TreeModels.TreeModelNode"/> changed
+            </summary>
+        </member>
+        <member name="M:JetBrains.Platform.UIInteractive.Ide.TreeGridBrowser.Revised.TreeModelBrowserView.CanSearchOccurrenceInto(JetBrains.Application.UI.TreeModels.TreeModelNode)">
+            <summary>
+            Defines predicate to prevent endless traversing in case of 'infinite' tree model, 
+            it defines if we are allowed to get into the given node's children
+            </summary>
+            <param name="treeModelNode">Node</param>
+            <returns>Returns true if we are allowed to get into the given node's children</returns>
+        </member>
+        <member name="M:JetBrains.Platform.UIInteractive.Ide.TreeGridBrowser.Revised.TreeModelBrowserView.OnMoveToOccurrence(JetBrains.Application.UI.TreeModels.TreeModelNode,System.Action)">
+            <summary>
+            Should be overridden in derived panel to perform an additional action
+            </summary>
+            <param name="occurrence"></param>
+        </member>
+        <member name="E:JetBrains.Platform.UIInteractive.Ide.TreeGridBrowser.TreeGridBrowserPanel.SelectedNodesChanged">
+            <summary>
+            Occures when selected nodes changes
+            </summary>
+        </member>
+        <member name="E:JetBrains.Platform.UIInteractive.Ide.TreeGridBrowser.TreeGridBrowserPanel.FocusedNodeChanged">
+            <summary>
+            Occures when focused node changes
+            </summary>
+        </member>
+        <member name="M:JetBrains.Platform.UIInteractive.Ide.TreeGridBrowser.TreeGridBrowserPanel.UsingAccessBrackets">
+            <summary>
+            Gets or sets brackets to warp model access
+            </summary>
+        </member>
+        <member name="M:JetBrains.Platform.UIInteractive.Ide.TreeGridBrowser.TreeGridBrowserPanel.CanSearchOccurrenceInto(JetBrains.Application.UI.TreeModels.TreeModelNode)">
+            <summary>
+            Defines predicate to prevent endless traversing in case of 'infinite' tree model, 
+            it defines if we are allowed to get into the given node's children
+            </summary>
+            <param name="treeModelNode">Node</param>
+            <returns>Returns true if we are allowed to get into the given node's children</returns>
+        </member>
+        <member name="M:JetBrains.Platform.UIInteractive.Ide.TreeGridBrowser.TreeGridBrowserPanel.OnMoveToOccurrence(JetBrains.Application.UI.TreeModels.TreeModelNode)">
+            <summary>
+            Should be overridden in derived panel to perform an additional action
+            </summary>
+            <param name="occurrence"></param>
+        </member>
+        <member name="P:JetBrains.Platform.UIInteractive.Ide.TreeGridBrowser.TreeGridBrowserPanel.IsCheckable">
+            <summary>
+            Gets or sets whether check boxes are visible and binded to nodes
+            </summary>
+        </member>
+        <member name="P:JetBrains.Platform.UIInteractive.Ide.TreeGridBrowser.TreeGridBrowserPanel.DefaultCheckedState">
+            <summary>
+            Gets or sets default check state
+            </summary>
+        </member>
+        <member name="M:JetBrains.Platform.UIInteractive.Ide.TreeGridBrowser.TreeGridBrowserPanel.GetCheckedNodes(System.Nullable{System.Boolean})">
+            <summary>
+            Gets user-checked nodes with required state (note, that if required state 
+            is equal to DefaultCheckedState you still be provided by ONLY user affected nodes)
+            </summary>
+            <param name="requiredCheckState">Required state</param>
+            <returns>Nodes</returns>
+        </member>
+        <member name="T:JetBrains.Platform.UIInteractive.Ide.TreeGridBrowser.TreeGridPresentableView">
+            <summary>
+            View for <see cref="T:JetBrains.Application.UI.TreeModels.TreeModel" />
+            </summary>
+        </member>
+        <member name="E:JetBrains.Platform.UIInteractive.Ide.TreeGridBrowser.TreeGridPresentableView.SelectedNodesChanged">
+            <summary>
+            Occures when selected nodes changes
+            </summary>
+        </member>
+        <member name="E:JetBrains.Platform.UIInteractive.Ide.TreeGridBrowser.TreeGridPresentableView.FocusedNodeChanged">
+            <summary>
+            Occures when focused node changes
+            </summary>
+        </member>
+        <member name="E:JetBrains.Platform.UIInteractive.Ide.TreeGridBrowser.TreeGridPresentableView.MouseDoubleClick">
+            <summary>
+            Occurs when user do mouse double click
+            </summary>
+        </member>
+        <member name="E:JetBrains.Platform.UIInteractive.Ide.TreeGridBrowser.TreeGridPresentableView.Updating">
+            <summary>
+            Occurs when update from model started
+            </summary>
+        </member>
+        <member name="E:JetBrains.Platform.UIInteractive.Ide.TreeGridBrowser.TreeGridPresentableView.Updated">
+            <summary>
+            Occurs when update from model completed
+            </summary>
+        </member>
+        <member name="E:JetBrains.Platform.UIInteractive.Ide.TreeGridBrowser.TreeGridPresentableView.Filtered">
+            <summary>
+            Occurs when a new filter is applied
+            </summary>
+        </member>
+        <member name="E:JetBrains.Platform.UIInteractive.Ide.TreeGridBrowser.TreeGridPresentableView.CheckedStateChanged">
+            <summary>
+            Occurs when check state of a node changes
+            </summary>
+        </member>
+        <member name="P:JetBrains.Platform.UIInteractive.Ide.TreeGridBrowser.TreeGridPresentableView.AccessBrackets">
+            <summary>
+            Gets or sets brackets to warp model access
+            </summary>
+        </member>
+        <member name="M:JetBrains.Platform.UIInteractive.Ide.TreeGridBrowser.TreeGridPresentableView.UpdateVisibilityStates(System.Boolean)">
+            <summary>
+            Applies current visibility states provided by the controller
+            </summary>
+        </member>
+        <member name="M:JetBrains.Platform.UIInteractive.Ide.TreeGridBrowser.TreeGridPresentableView.IsModelNodeAccepted(JetBrains.Application.UI.TreeModels.TreeModelNode,System.String)">
+            <summary>
+            Returns value indicating if specified modelNode is visible
+            </summary>
+        </member>
+        <member name="P:JetBrains.Platform.UIInteractive.Ide.TreeGridBrowser.TreeGridPresentableView.Model">
+            <summary>
+            Gets or sets <see cref="T:JetBrains.Application.UI.TreeModels.TreeModel"/>
+            </summary>
+        </member>
+        <member name="P:JetBrains.Platform.UIInteractive.Ide.TreeGridBrowser.TreeGridPresentableView.Presenter">
+            <summary>
+            Gets or sets <see cref="T:JetBrains.Application.UI.Controls.TreeView.StructuredPresenter`2"/>
+            </summary>
+        </member>
+        <member name="P:JetBrains.Platform.UIInteractive.Ide.TreeGridBrowser.TreeGridPresentableView.ActionInvocator">
+            <summary>
+            Gets or sets an action invokator
+            </summary>
+        </member>
+        <member name="P:JetBrains.Platform.UIInteractive.Ide.TreeGridBrowser.TreeGridPresentableView.IsCheckable">
+            <summary>
+            Gets or sets whether check boxes are visible and binded to nodes
+            </summary>
+        </member>
+        <member name="P:JetBrains.Platform.UIInteractive.Ide.TreeGridBrowser.TreeGridPresentableView.DefaultCheckedState">
+            <summary>
+            Gets or sets default check state
+            </summary>
+        </member>
+        <member name="M:JetBrains.Platform.UIInteractive.Ide.TreeGridBrowser.TreeGridPresentableView.GetCheckedNodes(System.Nullable{System.Boolean})">
+            <summary>
+            Gets user-checked nodes with required state (note, that if required state 
+            is equal to DefaultCheckedState you still be provided by ONLY user affected nodes)
+            </summary>
+            <param name="requiredCheckState">Required state</param>
+            <returns>Nodes</returns>
+        </member>
+        <member name="P:JetBrains.Platform.UIInteractive.Ide.TreeGridBrowser.TreeGridPresentableView.ColumnsDefinitions">
+            <summary>
+            Gets column definition collection related to the tree
+            </summary>
+        </member>
+        <member name="P:JetBrains.Platform.UIInteractive.Ide.TreeGridBrowser.TreeGridPresentableView.PrimaryColumnDefinition">
+            <summary>
+            Gets column definition bounded to model entities
+            </summary>
+        </member>
+        <member name="P:JetBrains.Platform.UIInteractive.Ide.TreeGridBrowser.TreeGridPresentableView.MaxTraverseDepth">
+            <summary>
+            Gets or sets how many levels are allowed to traverse in case of searching an item (building a path to an item)
+            </summary>
+        </member>
+        <member name="T:JetBrains.Platform.UIInteractive.Ide.TreeGridBrowser.TreeModelIteratorHelper">
+            <summary>
+            Helps to iterate <see cref="T:JetBrains.Application.UI.TreeModels.TreeModel"/> nodes as if they expanded and flattened
+            </summary>
+        </member>
+        <member name="M:JetBrains.Platform.UIInteractive.Ide.TreeGridBrowser.TreeModelIteratorHelper.Enumerate(JetBrains.Application.UI.TreeModels.TreeModel,System.Func{JetBrains.Application.UI.TreeModels.TreeModelNode,System.Boolean})">
+            <summary>
+            Enumerates all nodes of the given tree model
+            </summary>
+            <param name="treeModel">Model</param>
+            <param name="predicate">Predicate is required to prevent endless traversing in case of 'infinite' tree model, 
+            it defines if we are allowed to get into the given node's children</param>
+        </member>
+        <member name="M:JetBrains.Platform.UIInteractive.Ide.TreeGridBrowser.TreeModelIteratorHelper.Next(JetBrains.Application.UI.TreeModels.TreeModel,JetBrains.Application.UI.TreeModels.TreeModelNode,JetBrains.Application.UI.BindableLinq.Interfaces.IBindableView{JetBrains.Application.UI.TreeModels.TreeModelNode},System.Func{JetBrains.Application.UI.TreeModels.TreeModelNode,System.Boolean})">
+            <summary>
+            Get next node in the tree
+            </summary>
+            <param name="treeModel">Model</param>
+            <param name="node">Node that uses as a base one to calc a next one related to it</param>
+            <param name="roots">Roots of the tree</param>
+            <param name="predicate">Predicate is required to prevent endless traversing in case of 'infinite' tree model, 
+            it defines if we are allowed to get into the given node's children</param>
+            <returns>Next node or null if there is no nodes further</returns>
+        </member>
+        <member name="M:JetBrains.Platform.UIInteractive.Ide.TreeGridBrowser.TreeModelIteratorHelper.Previous(JetBrains.Application.UI.TreeModels.TreeModel,JetBrains.Application.UI.TreeModels.TreeModelNode,JetBrains.Application.UI.BindableLinq.Interfaces.IBindableView{JetBrains.Application.UI.TreeModels.TreeModelNode},System.Func{JetBrains.Application.UI.TreeModels.TreeModelNode,System.Boolean})">
+            <summary>
+            Get previous node in the tree
+            </summary>
+            <param name="treeModel">Model</param>
+            <param name="node">Node that uses as a base one to calc a previous one related to or null (roots will be used)</param>
+            <param name="roots">Roots of the tree</param>
+            <param name="predicate">Predicate is required to prevent endless traversing in case of 'infinite' tree model, 
+            it defines if we are allowed to get into the given node's children</param>
+            <returns>Next node or null if there is no nodes further</returns>
+        </member>
+        <member name="T:JetBrains.Platform.UIInteractive.Ide.TreeGridBrowser.TreeModelNodePresenter">
+            <summary>
+            Presenter for TreeModelNode via <see cref="T:JetBrains.Application.UI.Controls.TreeView.StructuredPresenter`2"/>
+            </summary>
+        </member>
+        <member name="M:JetBrains.Platform.UIInteractive.Ide.TreeGridBrowser.TreeModelNodePresenter.#ctor(JetBrains.DataFlow.Lifetime,JetBrains.Application.Threading.IShellLocks,JetBrains.Application.UI.Controls.TreeView.StructuredPresenter{JetBrains.Application.UI.TreeModels.TreeModelNode,JetBrains.Application.UI.Controls.Utils.IPresentableItem},System.Boolean,JetBrains.Application.UI.Controls.TreeGrid.IActionInvocator,JetBrains.Platform.UIInteractive.Ide.TreeGridBrowser.ITreeModelNodePresenterHost,System.Func{System.IDisposable},System.Boolean,System.Func{JetBrains.Application.UI.TreeModels.TreeModelNode,System.Nullable{System.Boolean}},System.Action{JetBrains.Application.UI.TreeModels.TreeModelNode,System.Boolean})">
+            <summary>
+            Constructor
+            </summary>
+            <param name="structuredPresenter">StructuredPresenter</param>
+        </member>
+    </members>
+</doc>
