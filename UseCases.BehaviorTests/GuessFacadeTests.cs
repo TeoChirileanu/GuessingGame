@@ -3,10 +3,8 @@ using Common;
 using NSubstitute;
 using NUnit.Framework;
 
-namespace UseCases.BehaviorTests
-{
-    public class GuessFacadeTests
-    {
+namespace UseCases.BehaviorTests {
+    public class GuessFacadeTests {
         private static readonly IGuessedNumberGetter FakeGuessedNumberGetter =
             Substitute.For<IGuessedNumberGetter>();
 
@@ -17,8 +15,7 @@ namespace UseCases.BehaviorTests
             Substitute.For<IGuessResultDeliverer>();
 
         [Test]
-        public void ShouldCallAppropriateCollaborators()
-        {
+        public void ShouldCallAppropriateCollaborators() {
             // Arrange
             FakeGuessedNumberGetter.GetGuessedNumber().Returns(Resources.CorrectNumber);
             IGuessFacade fakeGuessFacade = new GuessFacade(FakeGuessedNumberGetter,

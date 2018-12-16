@@ -8,7 +8,10 @@
         public static readonly string TooHighMessage = "Too High!";
         public static readonly string CorrectMessage = "Correct!";
 
-        public static readonly string NumberValidatorExceptionMessage =
+        public static readonly string NumberOutOfBoundsMessage =
             $"Number is out of range. It should be between {LowerBound} and {UpperBound}";
+
+        public static readonly string AskUserForNumberMessage =
+            $"Please enter a number between {LowerBound} and {UpperBound}";
     }
 }
