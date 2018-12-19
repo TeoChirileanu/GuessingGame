@@ -17,7 +17,7 @@ namespace Infrastructure {
             var isNumberWithinBounds = parsedNumber > Resources.LowerBound &&
                                        parsedNumber < Resources.UpperBound;
 
-            if (!isNumberWithinBounds) throw new Exception(Resources.NumberOutOfBoundsMessage);
+            if (!isNumberWithinBounds) return null;
 
             return parsedNumber;
         }
