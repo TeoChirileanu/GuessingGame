@@ -1,9 +1,10 @@
 using BusinessRules;
 using Common;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
 using NSubstitute;
-using NUnit.Framework;
 
 namespace UseCases.BehaviorTests {
+    [TestClass]
     public class GuessFacadeTests {
         private static readonly IGuessedNumberGetter FakeGuessedNumberGetter =
             Substitute.For<IGuessedNumberGetter>();
@@ -14,7 +15,7 @@ namespace UseCases.BehaviorTests {
         private static readonly IGuessResultDeliverer FakeGuessResultDeliverer =
             Substitute.For<IGuessResultDeliverer>();
 
-        [Test]
+        [TestMethod]
         public void ShouldCallAppropriateCollaborators() {
             // Arrange
             FakeGuessedNumberGetter.GetGuessedNumber().Returns(Resources.CorrectNumber);

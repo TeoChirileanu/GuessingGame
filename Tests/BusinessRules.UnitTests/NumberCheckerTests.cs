@@ -1,9 +1,10 @@
 using System;
 using Common;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
 using NFluent;
-using NUnit.Framework;
 
 namespace BusinessRules.UnitTests {
+    [TestClass]
     public class NumberCheckerTests {
         private static readonly INumberChecker NumberChecker =
             new NumberChecker(Resources.CorrectNumber);
@@ -12,7 +13,7 @@ namespace BusinessRules.UnitTests {
         private static string _expectedCheckResult;
         private static string _actualCheckResult;
 
-        [Test]
+        [TestMethod]
         public void NumberChecker_LowerThanCorrectNumber_TooLowMessage() {
             // Arrange
             _expectedCheckResult = Resources.TooLowMessage;
@@ -25,7 +26,7 @@ namespace BusinessRules.UnitTests {
             Check.That(_actualCheckResult).Equals(_expectedCheckResult);
         }
 
-        [Test]
+        [TestMethod]
         public void NumberChecker_HigherThanCorrectNumber_TooHighMessage() {
             // Arrange
             _expectedCheckResult = Resources.TooHighMessage;
@@ -38,7 +39,7 @@ namespace BusinessRules.UnitTests {
             Check.That(_actualCheckResult).Equals(_expectedCheckResult);
         }
 
-        [Test]
+        [TestMethod]
         public void NumberChecker_CorrectNumber_CorrectMessage() {
             // Arrange
             _expectedCheckResult = Resources.CorrectMessage;
@@ -51,11 +52,13 @@ namespace BusinessRules.UnitTests {
             Check.That(_actualCheckResult).Equals(_expectedCheckResult);
         }
 
-        [TestCase(Resources.LowerBound - 1)]
-        [TestCase(Resources.UpperBound + 1)]
-        [TestCase(int.MaxValue)]
-        [TestCase(int.MinValue)]
-        public void NumberChecker_OutOfBoundsNumber_Exception(int number) {
+        [DataRow(Resources.LowerBound - 1)]
+        [DataRow(Resources.UpperBound + 1)]
+        [DataRow(int.MaxValue)]
+        [DataRow(int.MinValue)]
+        [TestMethod]
+        public void NumberChecker_OutOfBoundsNumber_Exception(int number)
+        {
             // Arrange
             INumberChecker defaultNumberChecker = new NumberChecker();
             void NumberCheckCode() => defaultNumberChecker.CheckNumber(number);
