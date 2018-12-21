@@ -2,10 +2,11 @@
 
     <PropertyGroup>
         <TargetFramework>netstandard2.0</TargetFramework>
+        <LangVersion>latest</LangVersion>
     </PropertyGroup>
 
     <ItemGroup>
-        <ProjectReference Include="..\UseCases\UseCases.csproj"/>
+        <ProjectReference Include="..\UseCases\UseCases.csproj" />
     </ItemGroup>
 
 </Project>
