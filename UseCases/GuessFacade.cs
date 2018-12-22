@@ -46,6 +46,7 @@ namespace UseCases {
             var previousAttempts = _logger.GetLoggedGuesses();
             var message = $"Here are your previous attempts:\n{previousAttempts}\n";
             _guessResultDeliverer.Deliver(message);
+            _logger.ClearLog();
         }
     }
 }

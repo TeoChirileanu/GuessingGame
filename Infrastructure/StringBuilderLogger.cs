@@ -1,12 +1,11 @@
-﻿using System;
-using System.Text;
+﻿using System.Text;
 using UseCases;
 
 namespace Infrastructure {
-    public class StringBuilderLogger : ILogger, IDisposable {
+    public class StringBuilderLogger : ILogger {
         private static readonly StringBuilder StringBuilder = new StringBuilder();
 
-        public void Dispose() => StringBuilder.Clear();
+        public void ClearLog() => StringBuilder.Clear();
 
         public void Log(string message) => StringBuilder.AppendLine(message);
 
