@@ -12,25 +12,31 @@ namespace UseCases.BehaviorTests {
         private static readonly INumberChecker FakeNumberChecker =
             Substitute.For<INumberChecker>();
 
-        private static readonly IGuessResultDeliverer FakeGuessResultDeliverer =
-            Substitute.For<IGuessResultDeliverer>();
+        private static readonly IDeliverer FakeGuessResultDeliverer =
+            Substitute.For<IDeliverer>();
+
+        private static readonly ILogger FakeLogger =
+            Substitute.For<ILogger>();
 
         [TestMethod]
         public void ShouldCallAppropriateCollaborators() {
             // Arrange
             FakeGuessedNumberGetter.GetGuessedNumber().Returns(Resources.CorrectNumber);
-            IGuessFacade fakeGuessFacade = new GuessFacade(FakeGuessedNumberGetter,
-                FakeNumberChecker, FakeGuessResultDeliverer);
+            IGuessFacade fakeGuessFacade = new GuessFacade(
+                FakeGuessedNumberGetter, FakeNumberChecker, FakeLogger, FakeGuessResultDeliverer);
 
             // Act
-            var guessedNumber = fakeGuessFacade.GetGuessedNumber().GetValueOrDefault();
+            var guessedNumber = fakeGuessFacade.GetGuessedNumber();
             var guessResult = fakeGuessFacade.CheckGuessedNumber(guessedNumber);
             fakeGuessFacade.DeliverGuessResult(guessResult);
+            fakeGuessFacade.DeliverLoggedGuesses();
 
             // Assert
             FakeGuessedNumberGetter.Received().GetGuessedNumber();
-            FakeNumberChecker.Received().CheckNumber(Resources.CorrectNumber);
-            FakeGuessResultDeliverer.DeliverGuessResult(Resources.CorrectMessage);
+            FakeNumberChecker.Received().CheckNumber(Arg.Any<int>());
+            FakeGuessResultDeliverer.Received().Deliver(Arg.Any<string>());
+            FakeLogger.Received().Log(Arg.Any<string>());
+            FakeLogger.Received().GetLoggedGuesses();
         }
     }
 }

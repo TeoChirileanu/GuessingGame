@@ -7,6 +7,7 @@
         public static readonly string TooLowMessage = "Too Low!";
         public static readonly string TooHighMessage = "Too High!";
         public static readonly string CorrectMessage = "Correct!";
+        public static readonly string CheckingNumberMessage = "Checking {0}...";
 
         public static readonly string NumberOutOfBoundsMessage =
             $"Number is out of range. It should be between {LowerBound} and {UpperBound}";

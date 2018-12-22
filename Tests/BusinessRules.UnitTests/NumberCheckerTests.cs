@@ -57,8 +57,7 @@ namespace BusinessRules.UnitTests {
         [DataRow(int.MaxValue)]
         [DataRow(int.MinValue)]
         [TestMethod]
-        public void NumberChecker_OutOfBoundsNumber_Exception(int number)
-        {
+        public void NumberChecker_OutOfBoundsNumber_Exception(int number) {
             // Arrange
             INumberChecker defaultNumberChecker = new NumberChecker();
             void NumberCheckCode() => defaultNumberChecker.CheckNumber(number);

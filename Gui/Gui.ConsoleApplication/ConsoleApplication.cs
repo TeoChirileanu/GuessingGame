@@ -3,30 +3,28 @@ using Common;
 using Infrastructure;
 using UseCases;
 
-namespace Gui.ConsoleApplication
-{
-    public static class ConsoleApplication
-    {
+namespace Gui.ConsoleApplication {
+    public static class ConsoleApplication {
         public static void Main() {
-            IGuessedNumberGetter stdinGuessedNumberGetter = new StdinGuessedNumberGetter();
+            IGuessedNumberGetter numberGetter = new StdinGuessedNumberGetter();
+            ILogger logger = new StringBuilderLogger();
             INumberChecker numberChecker = new NumberChecker();
-            IGuessResultDeliverer guessResultDeliverer = new StdoutGuessResultDeliverer();
-            
-            var guessFacade = new GuessFacade(stdinGuessedNumberGetter, numberChecker, guessResultDeliverer);
+            IDeliverer deliverer = new StdoutGuessResultDeliverer();
+
+            var guessFacade = new GuessFacade(numberGetter, numberChecker, logger, deliverer);
             Run(guessFacade);
         }
 
-        private static void Run(IGuessFacade guessFacade)
-        {
+        private static void Run(IGuessFacade guessFacade) {
             var gameOver = false;
-            do
-            {
-                int? guessedNumber = guessFacade.GetGuessedNumber();
-                if (guessedNumber == null) continue;
-                var guessResult = guessFacade.CheckGuessedNumber(guessedNumber.Value);
-                if (guessResult.Equals(Resources.CorrectMessage)) gameOver = true;
+            do {
+                var guessedNumber = guessFacade.GetGuessedNumber();
+                var guessResult = guessFacade.CheckGuessedNumber(guessedNumber);
                 guessFacade.DeliverGuessResult(guessResult);
+                if (guessResult.Equals(Resources.CorrectMessage)) gameOver = true;
             } while (!gameOver);
+
+            guessFacade.DeliverLoggedGuesses();
         }
     }
 }

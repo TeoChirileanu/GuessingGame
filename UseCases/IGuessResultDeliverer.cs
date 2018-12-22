@@ -1,5 +1,5 @@
 ﻿namespace UseCases {
-    public interface IGuessResultDeliverer {
-        void DeliverGuessResult(string guessResult);
+    public interface IDeliverer {
+        void Deliver(string message);
     }
 }
