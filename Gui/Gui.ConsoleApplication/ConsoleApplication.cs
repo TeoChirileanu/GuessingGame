@@ -1,4 +1,5 @@
-﻿using BusinessRules;
+﻿using System;
+using BusinessRules;
 using Common;
 using Infrastructure;
 using UseCases;
@@ -6,13 +7,18 @@ using UseCases;
 namespace Gui.ConsoleApplication {
     public static class ConsoleApplication {
         public static void Main() {
-            IGuessedNumberGetter numberGetter = new StdinGuessedNumberGetter();
-            ILogger logger = new StringBuilderLogger();
-            INumberChecker numberChecker = new NumberChecker();
+            IGuessedNumberGetter getter = new StdinGuessedNumberGetter();
+            ILogger logger = new CosmosDbLogger();
+            INumberChecker checker = new NumberChecker(50);
             IDeliverer deliverer = new StdoutGuessResultDeliverer();
 
-            var guessFacade = new GuessFacade(numberGetter, numberChecker, logger, deliverer);
-            Run(guessFacade);
+            var guessFacade = new GuessFacade(getter, checker, logger, deliverer);
+            try {
+                Run(guessFacade);
+            }
+            catch (Exception e) {
+                Console.WriteLine($"Oops, something bad happened!\n{e}");
+            }
         }
 
         private static void Run(IGuessFacade guessFacade) {

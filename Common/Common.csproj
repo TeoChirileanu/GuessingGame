@@ -5,4 +5,15 @@
         <LangVersion>latest</LangVersion>
     </PropertyGroup>
 
+    <ItemGroup>
+      <PackageReference Include="LiteDB" Version="4.1.4" />
+      <PackageReference Include="sqlite-net-pcl" Version="1.5.231" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Reference Include="SQLite-net">
+        <HintPath>..\..\..\.nuget\packages\sqlite-net-pcl\1.5.231\lib\netstandard1.1\SQLite-net.dll</HintPath>
+      </Reference>
+    </ItemGroup>
+
 </Project>

@@ -37,6 +37,7 @@ namespace UseCases.BehaviorTests {
             FakeGuessResultDeliverer.Received().Deliver(Arg.Any<string>());
             FakeLogger.Received().Log(Arg.Any<string>());
             FakeLogger.Received().GetLoggedGuesses();
+            FakeLogger.Received().ClearLog();
         }
     }
 }

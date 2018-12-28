@@ -7,7 +7,7 @@ namespace BusinessRules {
 
         public NumberChecker(int correctNumber) => _correctNumber = correctNumber;
 
-        public NumberChecker() => _correctNumber = Resources.CorrectNumber;
+        public NumberChecker() => _correctNumber = Resources.GetRandomNumber();
 
         public string CheckNumber(int number) {
             NumberValidator.ValidateNumber(number);

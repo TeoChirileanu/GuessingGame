@@ -37,14 +37,14 @@ namespace UseCases {
         }
 
         public void DeliverGuessResult(string guessResult) {
-            var message = $"Here is the result of your guess:\n{guessResult}\n";
+            var message = $"The result of your guess:\n{guessResult}\n";
             _guessResultDeliverer.Deliver(message);
         }
 
 
         public void DeliverLoggedGuesses() {
             var previousAttempts = _logger.GetLoggedGuesses();
-            var message = $"Here are your previous attempts:\n{previousAttempts}\n";
+            var message = $"Here are your guesses so far:\n{previousAttempts}\n";
             _guessResultDeliverer.Deliver(message);
             _logger.ClearLog();
         }

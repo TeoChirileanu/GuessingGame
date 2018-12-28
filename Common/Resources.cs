@@ -1,4 +1,6 @@
-﻿namespace Common {
+﻿using System;
+
+namespace Common {
     public static class Resources {
         public const int LowerBound = 0;
         public const int UpperBound = 100;
@@ -14,5 +16,7 @@
 
         public static readonly string AskUserForNumberMessage =
             $"Please enter a number between {LowerBound} and {UpperBound}";
+
+        public static int GetRandomNumber() => new Random().Next(LowerBound, UpperBound);
     }
 }
