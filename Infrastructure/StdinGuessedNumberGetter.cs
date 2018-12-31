@@ -1,10 +1,11 @@
 ﻿using System;
+using System.Threading.Tasks;
 using Common;
 using UseCases;
 
 namespace Infrastructure {
     public class StdinGuessedNumberGetter : IGuessedNumberGetter {
-        public int? GetGuessedNumber() {
+        public async Task<int?> GetGuessedNumber() {
             bool parsedSuccessfully;
             int parsedNumber;
             do {
@@ -19,7 +20,7 @@ namespace Infrastructure {
 
             if (!isNumberWithinBounds) return null;
 
-            return parsedNumber;
+            return await Task.FromResult(parsedNumber);
         }
     }
 }

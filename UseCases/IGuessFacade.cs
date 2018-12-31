@@ -1,8 +1,10 @@
-﻿namespace UseCases {
+﻿using System.Threading.Tasks;
+
+namespace UseCases {
     public interface IGuessFacade {
-        int GetGuessedNumber();
-        string CheckGuessedNumber(int guessedNumber);
-        void DeliverGuessResult(string guessResult);
-        void DeliverLoggedGuesses();
+        Task<int> GetGuessedNumber();
+        Task<string> CheckGuessedNumber(int guessedNumber);
+        Task DeliverGuessResult(string guessResult);
+        Task DeliverLoggedGuesses();
     }
 }

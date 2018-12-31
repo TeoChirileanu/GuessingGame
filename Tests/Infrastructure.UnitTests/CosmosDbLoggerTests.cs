@@ -1,26 +1,27 @@
+using System.Threading.Tasks;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using NFluent;
 
 namespace Infrastructure.UnitTests {
-    [TestClass, Ignore("Need to mock local dev server")]
+    [TestClass /*, Ignore("Ensure Cosmos Service is up and running")*/]
     public class CosmosDbLoggerTests {
         private const string Message = "test message";
 
         private readonly CosmosDbLogger _logger = new CosmosDbLogger();
 
         [TestCleanup]
-        public void CleanUp() {
-            _logger.ClearLog();
+        public async Task CleanUp() {
+            await _logger.ClearLog();
         }
 
         [TestMethod]
-        public void ShouldCorrectlyLogMessage() {
+        public async Task ShouldCorrectlyLogMessage() {
             // Arrange
             const string expectedMessage = Message;
 
             // Act
-            _logger.Log(Message);
-            var actualMessage = _logger.GetLoggedGuesses();
+            await _logger.Log(Message);
+            var actualMessage = await _logger.GetLoggedGuesses();
 
             // Assert
             Check.That(actualMessage).Equals(expectedMessage);

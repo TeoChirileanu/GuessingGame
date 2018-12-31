@@ -1,3 +1,4 @@
+using System.Threading.Tasks;
 using BusinessRules;
 using Common;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
@@ -19,25 +20,25 @@ namespace UseCases.BehaviorTests {
             Substitute.For<ILogger>();
 
         [TestMethod]
-        public void ShouldCallAppropriateCollaborators() {
+        public async Task ShouldCallAppropriateCollaborators() {
             // Arrange
             FakeGuessedNumberGetter.GetGuessedNumber().Returns(Resources.CorrectNumber);
             IGuessFacade fakeGuessFacade = new GuessFacade(
                 FakeGuessedNumberGetter, FakeNumberChecker, FakeLogger, FakeGuessResultDeliverer);
 
             // Act
-            var guessedNumber = fakeGuessFacade.GetGuessedNumber();
-            var guessResult = fakeGuessFacade.CheckGuessedNumber(guessedNumber);
-            fakeGuessFacade.DeliverGuessResult(guessResult);
-            fakeGuessFacade.DeliverLoggedGuesses();
+            var guessedNumber = await fakeGuessFacade.GetGuessedNumber();
+            var guessResult = await fakeGuessFacade.CheckGuessedNumber(guessedNumber);
+            await fakeGuessFacade.DeliverGuessResult(guessResult);
+            await fakeGuessFacade.DeliverLoggedGuesses();
 
             // Assert
-            FakeGuessedNumberGetter.Received().GetGuessedNumber();
-            FakeNumberChecker.Received().CheckNumber(Arg.Any<int>());
-            FakeGuessResultDeliverer.Received().Deliver(Arg.Any<string>());
-            FakeLogger.Received().Log(Arg.Any<string>());
-            FakeLogger.Received().GetLoggedGuesses();
-            FakeLogger.Received().ClearLog();
+            await FakeGuessedNumberGetter.Received().GetGuessedNumber();
+            await FakeNumberChecker.Received().CheckNumber(Arg.Any<int>());
+            await FakeGuessResultDeliverer.Received().Deliver(Arg.Any<string>());
+            await FakeLogger.Received().Log(Arg.Any<string>());
+            await FakeLogger.Received().GetLoggedGuesses();
+            await FakeLogger.Received().ClearLog();
         }
     }
 }

@@ -1,7 +1,9 @@
-﻿namespace UseCases {
+﻿using System.Threading.Tasks;
+
+namespace UseCases {
     public interface ILogger {
-        void Log(string message);
-        string GetLoggedGuesses();
-        void ClearLog();
+        Task Log(string message);
+        Task<string> GetLoggedGuesses();
+        Task ClearLog();
     }
 }

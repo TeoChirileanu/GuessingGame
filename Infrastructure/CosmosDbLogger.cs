@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
+using System.Threading.Tasks;
 using Common;
 using Microsoft.Azure.Documents;
 using Microsoft.Azure.Documents.Client;
@@ -9,7 +10,7 @@ using Microsoft.Azure.Documents.Linq;
 using UseCases;
 
 namespace Infrastructure {
-    public class CosmosDbLogger : ILogger {
+    public class CosmosDbLogger : ILogger, IAsyncInitialization {
         private const string PrimaryKey =
             "C2y6yDjf5/R+ob0N8A7Cgv30VRDJIWEHLM+4QDU5DE2nQ9nDuVTqobD4b8mGGyPMbIZnqyMsEcaGQy67XIw/Jw==";
 
@@ -18,36 +19,27 @@ namespace Infrastructure {
 
         private static readonly Uri EndPoint = new Uri("https://localhost:8081");
         private static readonly DocumentClient Client = new DocumentClient(EndPoint, PrimaryKey);
+        public CosmosDbLogger() => Initialization = InitializeAsync();
 
-        public CosmosDbLogger() {
-            var database = new Database {
-                Id = DatabaseId
-            };
-            Client.CreateDatabaseIfNotExistsAsync(database);
+        public Task Initialization { get; }
 
-            var databaseUri = UriFactory.CreateDatabaseUri(database.Id);
-            var collection = new DocumentCollection {
-                Id = CollectionId
-            };
-            Client.CreateDocumentCollectionIfNotExistsAsync(databaseUri, collection);
-        }
-
-        public void Log(string message) {
+        public async Task Log(string message) {
             var log = new CosmosDbLog {
                 Id = Guid.NewGuid().ToString(),
                 Message = message
             };
             var uri = GetDocumentCollectionUri();
-            Client.UpsertDocumentAsync(uri, log);
+            await Client.UpsertDocumentAsync(uri, log);
         }
 
-        public string GetLoggedGuesses() {
+        public async Task<string> GetLoggedGuesses() {
             IEnumerable<CosmosDbLog> logs = GetLogs();
             IEnumerable<string> messages = logs.Select(x => x.Message);
-            return string.Join("\n", messages);
+            var result = string.Join("\n", messages);
+            return await Task.FromResult(result);
         }
 
-        public async void ClearLog() {
+        public async Task ClearLog() {
             var databaseUri = UriFactory.CreateDatabaseUri(DatabaseId);
             await Client.DeleteDatabaseAsync(databaseUri);
         }
@@ -67,5 +59,18 @@ namespace Infrastructure {
 
         private static Uri GetDocumentCollectionUri() =>
             UriFactory.CreateDocumentCollectionUri(DatabaseId, CollectionId);
+
+        private static async Task InitializeAsync() {
+            var database = new Database {
+                Id = DatabaseId
+            };
+            await Client.CreateDatabaseIfNotExistsAsync(database);
+
+            var databaseUri = UriFactory.CreateDatabaseUri(database.Id);
+            var collection = new DocumentCollection {
+                Id = CollectionId
+            };
+            await Client.CreateDocumentCollectionIfNotExistsAsync(databaseUri, collection);
+        }
     }
 }

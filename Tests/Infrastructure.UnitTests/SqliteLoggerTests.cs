@@ -1,3 +1,4 @@
+using System.Threading.Tasks;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using NFluent;
 
@@ -10,18 +11,18 @@ namespace Infrastructure.UnitTests {
         private readonly SqlLiteLogger _sqlLiteLogger = new SqlLiteLogger(TestDatabaseName);
 
         [TestCleanup]
-        public void CleanUp() {
-            _sqlLiteLogger.ClearLog();
+        public async Task CleanUp() {
+            await _sqlLiteLogger.ClearLog();
         }
 
         [TestMethod]
-        public void ShouldCorrectlyLogMessage() {
+        public async Task ShouldCorrectlyLogMessage() {
             // Arrange
             const string expectedMessage = Message;
 
             // Act
-            _sqlLiteLogger.Log(Message);
-            var actualMessage = _sqlLiteLogger.GetLoggedGuesses();
+            await _sqlLiteLogger.Log(Message);
+            var actualMessage = await _sqlLiteLogger.GetLoggedGuesses();
 
             // Assert
             Check.That(actualMessage).Equals(expectedMessage);

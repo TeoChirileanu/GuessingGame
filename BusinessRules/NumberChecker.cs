@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Threading.Tasks;
 using Common;
 
 namespace BusinessRules {
@@ -9,19 +10,25 @@ namespace BusinessRules {
 
         public NumberChecker() => _correctNumber = Resources.GetRandomNumber();
 
-        public string CheckNumber(int number) {
+        public async Task<string> CheckNumber(int number) {
             NumberValidator.ValidateNumber(number);
             var comparisonResult = number.CompareTo(_correctNumber);
+            string result;
             switch (comparisonResult) {
                 case -1:
-                    return Resources.TooLowMessage;
+                    result = Resources.TooLowMessage;
+                    break;
                 case 1:
-                    return Resources.TooHighMessage;
+                    result = Resources.TooHighMessage;
+                    break;
                 case 0:
-                    return Resources.CorrectMessage;
+                    result = Resources.CorrectMessage;
+                    break;
                 default:
                     throw new ArgumentOutOfRangeException();
             }
+
+            return await Task.FromResult(result);
         }
     }
 }

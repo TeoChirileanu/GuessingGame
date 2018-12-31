@@ -1,5 +1,7 @@
-﻿namespace UseCases {
+﻿using System.Threading.Tasks;
+
+namespace UseCases {
     public interface IDeliverer {
-        void Deliver(string message);
+        Task Deliver(string message);
     }
 }

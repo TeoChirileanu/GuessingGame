@@ -1,4 +1,5 @@
-﻿using BusinessRules;
+﻿using System.Threading.Tasks;
+using BusinessRules;
 using Common;
 
 namespace UseCases {
@@ -16,37 +17,37 @@ namespace UseCases {
             _logger = logger;
         }
 
-        public int GetGuessedNumber() {
+        public async Task<int> GetGuessedNumber() {
             int? number;
             var numberHasValue = false;
             do {
-                number = _guessedNumberGetter.GetGuessedNumber();
+                number = await _guessedNumberGetter.GetGuessedNumber();
                 if (number.HasValue) numberHasValue = true;
             } while (!numberHasValue);
 
             return number.Value;
         }
 
-        public string CheckGuessedNumber(int guessedNumber) {
+        public async Task<string> CheckGuessedNumber(int guessedNumber) {
             var checkingNumberMessageFormat =
                 string.Format(Resources.CheckingNumberMessage, guessedNumber);
-            _logger.Log(checkingNumberMessageFormat);
-            var guessResult = _numberChecker.CheckNumber(guessedNumber);
-            _logger.Log(guessResult);
+            await _logger.Log(checkingNumberMessageFormat);
+            var guessResult = await _numberChecker.CheckNumber(guessedNumber);
+            await _logger.Log(guessResult);
             return guessResult;
         }
 
-        public void DeliverGuessResult(string guessResult) {
+        public async Task DeliverGuessResult(string guessResult) {
             var message = $"The result of your guess:\n{guessResult}\n";
-            _guessResultDeliverer.Deliver(message);
+            await _guessResultDeliverer.Deliver(message);
         }
 
 
-        public void DeliverLoggedGuesses() {
-            var previousAttempts = _logger.GetLoggedGuesses();
+        public async Task DeliverLoggedGuesses() {
+            var previousAttempts = await _logger.GetLoggedGuesses();
             var message = $"Here are your guesses so far:\n{previousAttempts}\n";
-            _guessResultDeliverer.Deliver(message);
-            _logger.ClearLog();
+            await _guessResultDeliverer.Deliver(message);
+            await _logger.ClearLog();
         }
     }
 }

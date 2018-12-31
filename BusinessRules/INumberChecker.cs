@@ -1,5 +1,7 @@
-﻿namespace BusinessRules {
+﻿using System.Threading.Tasks;
+
+namespace BusinessRules {
     public interface INumberChecker {
-        string CheckNumber(int number);
+        Task<string> CheckNumber(int number);
     }
 }

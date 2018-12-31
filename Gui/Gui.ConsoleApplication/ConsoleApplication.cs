@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Threading.Tasks;
 using BusinessRules;
 using Common;
 using Infrastructure;
@@ -6,7 +7,7 @@ using UseCases;
 
 namespace Gui.ConsoleApplication {
     public static class ConsoleApplication {
-        public static void Main() {
+        public static async Task Main() {
             IGuessedNumberGetter getter = new StdinGuessedNumberGetter();
             ILogger logger = new CosmosDbLogger();
             INumberChecker checker = new NumberChecker(50);
@@ -14,23 +15,23 @@ namespace Gui.ConsoleApplication {
 
             var guessFacade = new GuessFacade(getter, checker, logger, deliverer);
             try {
-                Run(guessFacade);
+                await Run(guessFacade);
             }
             catch (Exception e) {
                 Console.WriteLine($"Oops, something bad happened!\n{e}");
             }
         }
 
-        private static void Run(IGuessFacade guessFacade) {
+        private static async Task Run(IGuessFacade guessFacade) {
             var gameOver = false;
             do {
-                var guessedNumber = guessFacade.GetGuessedNumber();
-                var guessResult = guessFacade.CheckGuessedNumber(guessedNumber);
-                guessFacade.DeliverGuessResult(guessResult);
+                var guessedNumber = await guessFacade.GetGuessedNumber();
+                var guessResult = await guessFacade.CheckGuessedNumber(guessedNumber);
+                await guessFacade.DeliverGuessResult(guessResult);
                 if (guessResult.Equals(Resources.CorrectMessage)) gameOver = true;
             } while (!gameOver);
 
-            guessFacade.DeliverLoggedGuesses();
+            await guessFacade.DeliverLoggedGuesses();
         }
     }
 }

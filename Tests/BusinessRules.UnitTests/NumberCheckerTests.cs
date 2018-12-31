@@ -1,4 +1,5 @@
 using System;
+using System.Threading.Tasks;
 using Common;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using NFluent;
@@ -14,39 +15,39 @@ namespace BusinessRules.UnitTests {
         private static string _actualCheckResult;
 
         [TestMethod]
-        public void NumberChecker_LowerThanCorrectNumber_TooLowMessage() {
+        public async Task NumberChecker_LowerThanCorrectNumber_TooLowMessage() {
             // Arrange
             _expectedCheckResult = Resources.TooLowMessage;
             _numberToCheck = Resources.CorrectNumber - 1;
 
             // Act
-            _actualCheckResult = NumberChecker.CheckNumber(_numberToCheck);
+            _actualCheckResult = await NumberChecker.CheckNumber(_numberToCheck);
 
             // Assert
             Check.That(_actualCheckResult).Equals(_expectedCheckResult);
         }
 
         [TestMethod]
-        public void NumberChecker_HigherThanCorrectNumber_TooHighMessage() {
+        public async Task NumberChecker_HigherThanCorrectNumber_TooHighMessage() {
             // Arrange
             _expectedCheckResult = Resources.TooHighMessage;
             _numberToCheck = Resources.CorrectNumber + 1;
 
             // Act
-            _actualCheckResult = NumberChecker.CheckNumber(_numberToCheck);
+            _actualCheckResult = await NumberChecker.CheckNumber(_numberToCheck);
 
             // Assert
             Check.That(_actualCheckResult).Equals(_expectedCheckResult);
         }
 
         [TestMethod]
-        public void NumberChecker_CorrectNumber_CorrectMessage() {
+        public async Task NumberChecker_CorrectNumber_CorrectMessage() {
             // Arrange
             _expectedCheckResult = Resources.CorrectMessage;
             _numberToCheck = Resources.CorrectNumber;
 
             // Act
-            _actualCheckResult = NumberChecker.CheckNumber(_numberToCheck);
+            _actualCheckResult = await NumberChecker.CheckNumber(_numberToCheck);
 
             // Assert
             Check.That(_actualCheckResult).Equals(_expectedCheckResult);
@@ -60,7 +61,7 @@ namespace BusinessRules.UnitTests {
         public void NumberChecker_OutOfBoundsNumber_Exception(int number) {
             // Arrange
             INumberChecker defaultNumberChecker = new NumberChecker();
-            void NumberCheckCode() => defaultNumberChecker.CheckNumber(number);
+            async Task NumberCheckCode() => await defaultNumberChecker.CheckNumber(number);
 
             // Act && Assert
             Check.ThatCode(NumberCheckCode).Throws<ArgumentOutOfRangeException>();

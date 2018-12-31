@@ -1,3 +1,4 @@
+using System.Threading.Tasks;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using NFluent;
 
@@ -14,18 +15,18 @@ namespace Infrastructure.UnitTests {
         };
 
         [TestCleanup]
-        public void CleanUp() {
-            _liteDbLogger.ClearLog();
+        public async Task CleanUp() {
+            await _liteDbLogger.ClearLog();
         }
 
         [TestMethod]
-        public void ShouldCorrectlyLogMessage() {
+        public async Task ShouldCorrectlyLogMessage() {
             // Arrange
             const string expectedMessage = Message;
 
             // Act
-            _liteDbLogger.Log(Message);
-            var actualMessage = _liteDbLogger.GetLoggedGuesses();
+            await _liteDbLogger.Log(Message);
+            var actualMessage = await _liteDbLogger.GetLoggedGuesses();
 
             // Assert
             Check.That(actualMessage).Equals(expectedMessage);

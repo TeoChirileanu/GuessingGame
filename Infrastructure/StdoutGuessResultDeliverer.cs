@@ -1,8 +1,12 @@
 using System;
+using System.Threading.Tasks;
 using UseCases;
 
 namespace Infrastructure {
     public class StdoutGuessResultDeliverer : IDeliverer {
-        public void Deliver(string guessResult) => Console.WriteLine(guessResult);
+        public async Task Deliver(string guessResult) {
+            Console.WriteLine(guessResult);
+            await Task.CompletedTask;
+        }
     }
 }

@@ -1,6 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
+using System.Threading.Tasks;
 using Common;
 using SQLite;
 using UseCases;
@@ -8,30 +8,29 @@ using UseCases;
 namespace Infrastructure {
     public class SqlLiteLogger : ILogger {
         private const string DefaultDatabaseName = "sqliteprod";
-        private readonly SQLiteConnection _connection;
+        private readonly SQLiteAsyncConnection _connection;
 
         public SqlLiteLogger(string databaseName = null) {
-            _connection = new SQLiteConnection(databaseName ?? DefaultDatabaseName);
-            _connection.CreateTable<SqliteLog>();
+            _connection = new SQLiteAsyncConnection(databaseName ?? DefaultDatabaseName);
+            _connection.CreateTableAsync<SqliteLog>();
         }
 
-        public void Log(string message) {
+        public async Task Log(string message) {
             var log = new SqliteLog {
                 Message = message
             };
-            var foo = _connection.Insert(log);
-            if (foo != 1) throw new Exception("Insert failed!");
+            await _connection.InsertAsync(log);
         }
 
-        public string GetLoggedGuesses() {
+        public async Task<string> GetLoggedGuesses() {
             const string getAllMessagesQuery = "select * from SqliteLog";
-            List<SqliteLog> logs = _connection.Query<SqliteLog>(getAllMessagesQuery);
+            List<SqliteLog> logs = await _connection.QueryAsync<SqliteLog>(getAllMessagesQuery);
             IEnumerable<string> messages = logs.Select(x => x.Message);
             return string.Join("\n", messages);
         }
 
-        public void ClearLog() {
-            _connection.DropTable<SqliteLog>();
+        public async Task ClearLog() {
+            await _connection.DropTableAsync<SqliteLog>();
         }
     }
 }

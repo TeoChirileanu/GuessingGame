@@ -1,5 +1,7 @@
-﻿namespace UseCases {
+﻿using System.Threading.Tasks;
+
+namespace UseCases {
     public interface IGuessedNumberGetter {
-        int? GetGuessedNumber();
+        Task<int?> GetGuessedNumber();
     }
 }

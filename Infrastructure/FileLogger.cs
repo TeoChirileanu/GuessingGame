@@ -1,25 +1,26 @@
 ﻿using System.IO;
+using System.Threading.Tasks;
 using UseCases;
 
 namespace Infrastructure {
     public class FileLogger : ILogger {
         private const string FileName = "log.txt";
 
-        public void Log(string message) {
+        public async Task Log(string message) {
             using (var stream = new StreamWriter(FileName, true)) {
-                stream.WriteLine(message);
+                await stream.WriteLineAsync(message);
             }
         }
 
-        public string GetLoggedGuesses() {
+        public async Task<string> GetLoggedGuesses() {
             using (var stream = new StreamReader(FileName)) {
-                return stream.ReadLine();
+                return await stream.ReadLineAsync();
             }
         }
 
-        public void ClearLog() {
+        public async Task ClearLog() {
             using (var stream = new StreamWriter(FileName)) {
-                stream.Write(string.Empty);
+                await stream.WriteAsync(string.Empty);
             }
         }
     }

@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
+using System.Threading.Tasks;
 using Common;
 using LiteDB;
 using UseCases;
@@ -9,7 +10,7 @@ namespace Infrastructure {
         public string CollectionName { private get; set; } = "LogCollection";
         public string DatabaseName { private get; set; } = "log.litedb";
 
-        public void Log(string message) {
+        public async Task Log(string message) {
             using (var liteDatabase = new LiteDatabase(DatabaseName)) {
                 LiteCollection<LiteDbLog> logCollection =
                     liteDatabase.GetCollection<LiteDbLog>(CollectionName);
@@ -18,24 +19,29 @@ namespace Infrastructure {
                 };
                 logCollection.Upsert(messageDto);
             }
+
+            await Task.CompletedTask;
         }
 
-        public string GetLoggedGuesses() {
+        public async Task<string> GetLoggedGuesses() {
             using (var liteDatabase = new LiteDatabase(DatabaseName)) {
                 LiteCollection<LiteDbLog> logCollection =
                     liteDatabase.GetCollection<LiteDbLog>(CollectionName);
                 IEnumerable<LiteDbLog> logs = logCollection.FindAll();
                 IEnumerable<string> messages = logs.Select(x => x.Message);
-                return string.Join("\n", messages);
+                var result = string.Join("\n", messages);
+                return await Task.FromResult(result);
             }
         }
 
-        public void ClearLog() {
+        public async Task ClearLog() {
             using (var liteDatabase = new LiteDatabase(DatabaseName)) {
                 LiteCollection<LiteDbLog> logCollection =
                     liteDatabase.GetCollection<LiteDbLog>(CollectionName);
                 logCollection.Delete(Query.All());
             }
+
+            await Task.CompletedTask;
         }
     }
 }
