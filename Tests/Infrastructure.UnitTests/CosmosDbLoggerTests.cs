@@ -3,7 +3,8 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 using NFluent;
 
 namespace Infrastructure.UnitTests {
-    [TestClass, Ignore("Ensure Cosmos Service is up and running")]
+    [TestClass]
+    [Ignore("Ensure Cosmos Service is up and running")]
     public class CosmosDbLoggerTests {
         private const string Message = "test message";
 

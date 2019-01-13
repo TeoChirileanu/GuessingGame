@@ -17,6 +17,12 @@ namespace Common {
         public static readonly string AskUserForNumberMessage =
             $"Please enter a number between {LowerBound} and {UpperBound}";
 
+        public static readonly string NoGetterProvided = "No Guessed Number Getter Provided!";
+
+        public static readonly string NoLoggerProvided = "No Logger Provided!";
+        public static readonly string NoNumberCheckerProvided = "No Number Checker Provided!";
+        public static readonly string NoDelivererProvided = "No Deliverer Provided!";
+
         public static int GetRandomNumber() => new Random().Next(LowerBound, UpperBound);
     }
 }

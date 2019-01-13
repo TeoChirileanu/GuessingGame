@@ -14,7 +14,7 @@ namespace Infrastructure {
 
         public async Task<string> GetLoggedGuesses() {
             using (var stream = new StreamReader(FileName)) {
-                return await stream.ReadLineAsync();
+                return await stream.ReadToEndAsync();
             }
         }
 

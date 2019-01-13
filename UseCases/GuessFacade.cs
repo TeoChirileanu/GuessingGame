@@ -1,27 +1,22 @@
-﻿using System.Threading.Tasks;
+﻿using System;
+using System.Threading.Tasks;
 using BusinessRules;
 using Common;
 
 namespace UseCases {
     public class GuessFacade : IGuessFacade {
-        private readonly IGuessedNumberGetter _guessedNumberGetter;
-        private readonly IDeliverer _guessResultDeliverer;
-        private readonly ILogger _logger;
-        private readonly INumberChecker _numberChecker;
-
-        public GuessFacade(IGuessedNumberGetter guessedNumberGetter, INumberChecker numberChecker,
-            ILogger logger, IDeliverer deliverer) {
-            _guessedNumberGetter = guessedNumberGetter;
-            _numberChecker = numberChecker;
-            _guessResultDeliverer = deliverer;
-            _logger = logger;
-        }
+        public IGuessedNumberGetter GuessedNumberGetter { private get; set; }
+        public IDeliverer Deliverer { private get; set; }
+        public ILogger Logger { private get; set; }
+        public INumberChecker NumberChecker { private get; set; }
 
         public async Task<int> GetGuessedNumber() {
+            if (GuessedNumberGetter is null)
+                throw new Exception(Resources.NoGetterProvided);
             int? number;
             var numberHasValue = false;
             do {
-                number = await _guessedNumberGetter.GetGuessedNumber();
+                number = await GuessedNumberGetter.GetGuessedNumber();
                 if (number.HasValue) numberHasValue = true;
             } while (!numberHasValue);
 
@@ -29,25 +24,30 @@ namespace UseCases {
         }
 
         public async Task<string> CheckGuessedNumber(int guessedNumber) {
+            if (Logger is null) throw new Exception(Resources.NoLoggerProvided);
+
+            if (NumberChecker is null) throw new Exception(Resources.NoNumberCheckerProvided);
             var checkingNumberMessageFormat =
                 string.Format(Resources.CheckingNumberMessage, guessedNumber);
-            await _logger.Log(checkingNumberMessageFormat);
-            var guessResult = await _numberChecker.CheckNumber(guessedNumber);
-            await _logger.Log(guessResult);
+            await Logger.Log(checkingNumberMessageFormat);
+            var guessResult = await NumberChecker.CheckNumber(guessedNumber);
+            await Logger.Log(guessResult);
             return guessResult;
         }
 
         public async Task DeliverGuessResult(string guessResult) {
+            if (Deliverer is null) throw new Exception(Resources.NoDelivererProvided);
             var message = $"The result of your guess:\n{guessResult}\n";
-            await _guessResultDeliverer.Deliver(message);
+            await Deliverer.Deliver(message);
         }
 
-
         public async Task DeliverLoggedGuesses() {
-            var previousAttempts = await _logger.GetLoggedGuesses();
+            if (Logger is null) throw new Exception(Resources.NoLoggerProvided);
+            if (Deliverer is null) throw new Exception(Resources.NoDelivererProvided);
+            var previousAttempts = await Logger.GetLoggedGuesses();
             var message = $"Here are your guesses so far:\n{previousAttempts}\n";
-            await _guessResultDeliverer.Deliver(message);
-            await _logger.ClearLog();
+            await Deliverer.Deliver(message);
+            await Logger.ClearLog();
         }
     }
 }

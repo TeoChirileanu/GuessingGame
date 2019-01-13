@@ -8,17 +8,17 @@ using UseCases;
 namespace Gui.ConsoleApplication {
     public static class ConsoleApplication {
         public static async Task Main() {
-            IGuessedNumberGetter getter = new StdinGuessedNumberGetter();
-            ILogger logger = new CosmosDbLogger();
-            INumberChecker checker = new NumberChecker(50);
-            IDeliverer deliverer = new StdoutGuessResultDeliverer();
-
-            var guessFacade = new GuessFacade(getter, checker, logger, deliverer);
+            var guessFacade = new GuessFacade {
+                GuessedNumberGetter = new StdinGuessedNumberGetter(),
+                Deliverer = new StdoutGuessResultDeliverer(),
+                Logger = new StringBuilderLogger(),
+                NumberChecker = new NumberChecker(50)
+            };
             try {
                 await Run(guessFacade);
             }
             catch (Exception e) {
-                Console.WriteLine($"Oops, something bad happened!\n{e}");
+                Console.WriteLine($"Oops, something bad happened:\n{e}");
             }
         }
 

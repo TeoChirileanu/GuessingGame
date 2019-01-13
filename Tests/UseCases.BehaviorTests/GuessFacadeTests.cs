@@ -23,8 +23,12 @@ namespace UseCases.BehaviorTests {
         public async Task ShouldCallAppropriateCollaborators() {
             // Arrange
             FakeGuessedNumberGetter.GetGuessedNumber().Returns(Resources.CorrectNumber);
-            IGuessFacade fakeGuessFacade = new GuessFacade(
-                FakeGuessedNumberGetter, FakeNumberChecker, FakeLogger, FakeGuessResultDeliverer);
+            IGuessFacade fakeGuessFacade = new GuessFacade {
+                GuessedNumberGetter = FakeGuessedNumberGetter,
+                Deliverer = FakeGuessResultDeliverer,
+                Logger = FakeLogger,
+                NumberChecker = FakeNumberChecker
+            };
 
             // Act
             var guessedNumber = await fakeGuessFacade.GetGuessedNumber();
