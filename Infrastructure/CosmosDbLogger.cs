@@ -17,7 +17,7 @@ namespace Infrastructure {
         private const string DatabaseId = "LogDatabase";
         private const string CollectionId = "LogCollection";
 
-        private static readonly Uri EndPoint = new Uri("https://localhost:8081");
+        private static readonly Uri EndPoint = new Uri(Resources.LocalHostUri);
         private static readonly DocumentClient Client = new DocumentClient(EndPoint, PrimaryKey);
         public CosmosDbLogger() => Initialization = InitializeAsync();
 
@@ -44,7 +44,7 @@ namespace Infrastructure {
             await Client.DeleteDatabaseAsync(databaseUri);
         }
 
-        private IEnumerable<CosmosDbLog> GetLogs() {
+        private static IEnumerable<CosmosDbLog> GetLogs() {
             var uri = GetDocumentCollectionUri();
             IDocumentQuery<CosmosDbLog> query = Client
                 .CreateDocumentQuery<CosmosDbLog>(uri).AsDocumentQuery();

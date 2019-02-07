@@ -1,7 +1,7 @@
 ﻿using System;
 
 namespace Common {
-    public static class Resources {
+    public static partial class Resources {
         public const int LowerBound = 0;
         public const int UpperBound = 100;
         public const int CorrectNumber = 50;
@@ -24,5 +24,12 @@ namespace Common {
         public static readonly string NoDelivererProvided = "No Deliverer Provided!";
 
         public static int GetRandomNumber() => new Random().Next(LowerBound, UpperBound);
+    }
+
+    public static partial class Resources {
+        private const string LocalHostAddress = "https://localhost";
+        private const int CosmosDbPort = 8081;
+
+        public static readonly string LocalHostUri = $"{LocalHostAddress}:{CosmosDbPort}";
     }
 }
