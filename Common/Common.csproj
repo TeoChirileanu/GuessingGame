@@ -3,6 +3,7 @@
     <PropertyGroup>
         <TargetFramework>netstandard2.0</TargetFramework>
         <LangVersion>latest</LangVersion>
+        <ProjectGuid>{95ab6af5-b3fc-4102-9abd-5d03a28441e0}</ProjectGuid>
     </PropertyGroup>
 
     <ItemGroup>
