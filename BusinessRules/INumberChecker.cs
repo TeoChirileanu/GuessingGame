@@ -1,6 +1,6 @@
 ﻿using System.Threading.Tasks;
 
-namespace BusinessRules {
+namespace GuessingGame.BusinessRules {
     public interface INumberChecker {
         Task<string> CheckNumber(int number);
     }

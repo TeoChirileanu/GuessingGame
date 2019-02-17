@@ -7,7 +7,7 @@
     </PropertyGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\BusinessRules\BusinessRules.csproj" />
+      <ProjectReference Include="..\BusinessRules\GuessingGame.BusinessRules.csproj" />
     </ItemGroup>
 
 </Project>

@@ -1,6 +1,6 @@
 ﻿using System.Threading.Tasks;
 
-namespace UseCases {
+namespace GuessingGame.UseCases {
     public interface IDeliverer {
         Task Deliver(string message);
     }

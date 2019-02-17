@@ -1,6 +1,7 @@
 using System.Threading.Tasks;
-using BusinessRules;
-using Common;
+using GuessingGame.BusinessRules;
+using GuessingGame.Common;
+using GuessingGame.UseCases;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using NSubstitute;
 

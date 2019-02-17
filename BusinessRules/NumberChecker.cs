@@ -1,8 +1,8 @@
 ﻿using System;
 using System.Threading.Tasks;
-using Common;
+using GuessingGame.Common;
 
-namespace BusinessRules {
+namespace GuessingGame.BusinessRules {
     public class NumberChecker : INumberChecker {
         private readonly int _correctNumber;
 

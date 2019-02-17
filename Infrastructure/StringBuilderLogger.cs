@@ -1,8 +1,8 @@
 ﻿using System.Text;
 using System.Threading.Tasks;
-using UseCases;
+using GuessingGame.UseCases;
 
-namespace Infrastructure {
+namespace GuessingGame.Infrastructure {
     public class StringBuilderLogger : ILogger {
         private static readonly StringBuilder StringBuilder = new StringBuilder();
 

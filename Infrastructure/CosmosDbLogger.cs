@@ -3,13 +3,13 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
 using System.Threading.Tasks;
-using Common;
+using GuessingGame.Common;
+using GuessingGame.UseCases;
 using Microsoft.Azure.Documents;
 using Microsoft.Azure.Documents.Client;
 using Microsoft.Azure.Documents.Linq;
-using UseCases;
 
-namespace Infrastructure {
+namespace GuessingGame.Infrastructure {
     public class CosmosDbLogger : ILogger, IAsyncInitialization {
         private const string PrimaryKey =
             "C2y6yDjf5/R+ob0N8A7Cgv30VRDJIWEHLM+4QDU5DE2nQ9nDuVTqobD4b8mGGyPMbIZnqyMsEcaGQy67XIw/Jw==";

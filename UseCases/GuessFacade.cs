@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Threading.Tasks;
-using BusinessRules;
-using Common;
+using GuessingGame.BusinessRules;
+using GuessingGame.Common;
 
-namespace UseCases {
+namespace GuessingGame.UseCases {
     public class GuessFacade : IGuessFacade {
         public IGuessedNumberGetter GuessedNumberGetter { private get; set; }
         public IDeliverer Deliverer { private get; set; }

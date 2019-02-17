@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Threading.Tasks;
-using Common;
-using UseCases;
+using GuessingGame.Common;
+using GuessingGame.UseCases;
 
-namespace Infrastructure {
+namespace GuessingGame.Infrastructure {
     public class StdinGuessedNumberGetter : IGuessedNumberGetter {
         public async Task<int?> GetGuessedNumber() {
             bool parsedSuccessfully;

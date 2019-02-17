@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Common {
+namespace GuessingGame.Common {
     public static class NumberValidator {
         public static void ValidateNumber(int number) {
             if (number < Resources.LowerBound || number > Resources.UpperBound)

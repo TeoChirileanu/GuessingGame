@@ -1,11 +1,11 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using Common;
+using GuessingGame.Common;
+using GuessingGame.UseCases;
 using LiteDB;
-using UseCases;
 
-namespace Infrastructure {
+namespace GuessingGame.Infrastructure {
     public class LiteDbLogger : ILogger {
         public string CollectionName { private get; set; } = "LogCollection";
         public string DatabaseName { private get; set; } = "log.litedb";

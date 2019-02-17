@@ -1,6 +1,6 @@
 ﻿using System.Threading.Tasks;
 
-namespace UseCases {
+namespace GuessingGame.UseCases {
     public interface ILogger {
         Task Log(string message);
         Task<string> GetLoggedGuesses();

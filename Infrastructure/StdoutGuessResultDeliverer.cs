@@ -1,8 +1,8 @@
 using System;
 using System.Threading.Tasks;
-using UseCases;
+using GuessingGame.UseCases;
 
-namespace Infrastructure {
+namespace GuessingGame.Infrastructure {
     public class StdoutGuessResultDeliverer : IDeliverer {
         public async Task Deliver(string guessResult) {
             Console.WriteLine(guessResult);

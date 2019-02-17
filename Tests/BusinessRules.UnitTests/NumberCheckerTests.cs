@@ -1,6 +1,7 @@
 using System;
 using System.Threading.Tasks;
-using Common;
+using GuessingGame.BusinessRules;
+using GuessingGame.Common;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using NFluent;
 

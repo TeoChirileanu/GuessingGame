@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Common {
+namespace GuessingGame.Common {
     public static partial class Resources {
         public const int LowerBound = 0;
         public const int UpperBound = 100;

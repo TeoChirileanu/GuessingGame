@@ -1,11 +1,11 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using Common;
+using GuessingGame.Common;
+using GuessingGame.UseCases;
 using SQLite;
-using UseCases;
 
-namespace Infrastructure {
+namespace GuessingGame.Infrastructure {
     public class SqlLiteLogger : ILogger {
         private const string DefaultDatabaseName = "sqliteprod";
         private readonly SQLiteAsyncConnection _connection;

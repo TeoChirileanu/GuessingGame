@@ -1,8 +1,8 @@
 ﻿using System.IO;
 using System.Threading.Tasks;
-using UseCases;
+using GuessingGame.UseCases;
 
-namespace Infrastructure {
+namespace GuessingGame.Infrastructure {
     public class FileLogger : ILogger {
         private const string FileName = "log.txt";
 

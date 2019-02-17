@@ -1,4 +1,5 @@
 using System.Threading.Tasks;
+using GuessingGame.Infrastructure;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using NFluent;
 

@@ -1,6 +1,6 @@
 ﻿using SQLite;
 
-namespace Common {
+namespace GuessingGame.Common {
     public class SqliteLog : ILog<int> {
         [PrimaryKey]
         [AutoIncrement]

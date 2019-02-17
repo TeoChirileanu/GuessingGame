@@ -1,6 +1,6 @@
 ﻿using System.Threading.Tasks;
 
-namespace Infrastructure {
+namespace GuessingGame.Infrastructure {
     public interface IAsyncInitialization {
         Task Initialization { get; }
     }

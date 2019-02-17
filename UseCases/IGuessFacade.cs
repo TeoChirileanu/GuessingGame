@@ -1,6 +1,6 @@
 ﻿using System.Threading.Tasks;
 
-namespace UseCases {
+namespace GuessingGame.UseCases {
     public interface IGuessFacade {
         Task<int> GetGuessedNumber();
         Task<string> CheckGuessedNumber(int guessedNumber);

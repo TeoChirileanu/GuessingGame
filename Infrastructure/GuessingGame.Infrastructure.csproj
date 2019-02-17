@@ -14,7 +14,7 @@
     </ItemGroup>
 
     <ItemGroup>
-        <ProjectReference Include="..\UseCases\UseCases.csproj" />
+      <ProjectReference Include="..\UseCases\GuessingGame.UseCases.csproj" />
     </ItemGroup>
 
 </Project>
