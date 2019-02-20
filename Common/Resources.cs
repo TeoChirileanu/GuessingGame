@@ -11,6 +11,8 @@ namespace GuessingGame.Common {
         public static readonly string CorrectMessage = "Correct!";
         public static readonly string CheckingNumberMessage = "Checking {0}...";
 
+        public static readonly string InvalidNumberMessage = "That is not a valid number!";
+
         public static readonly string NumberOutOfBoundsMessage =
             $"Number is out of range. It should be between {LowerBound} and {UpperBound}";
 
