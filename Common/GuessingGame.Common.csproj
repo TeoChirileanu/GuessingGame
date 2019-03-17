@@ -1,8 +1,8 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
     <PropertyGroup>
-        <TargetFramework>netstandard2.1</TargetFramework>
-        <LangVersion>preview</LangVersion>
+        <TargetFramework>netstandard2.0</TargetFramework>
+        <LangVersion>latest</LangVersion>
         <ProjectGuid>{95ab6af5-b3fc-4102-9abd-5d03a28441e0}</ProjectGuid>
         <Platforms>AnyCPU;x64</Platforms>
     </PropertyGroup>
