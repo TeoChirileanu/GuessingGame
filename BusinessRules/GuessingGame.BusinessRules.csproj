@@ -4,7 +4,6 @@
         <TargetFramework>netstandard2.0</TargetFramework>
         <LangVersion>latest</LangVersion>
         <ProjectGuid>{301fd429-d861-40c7-b517-fa31aaf6921c}</ProjectGuid>
-        <Platforms>AnyCPU;x64</Platforms>
     </PropertyGroup>
 
     <ItemGroup>
