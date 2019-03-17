@@ -1,11 +1,11 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>netcoreapp2.2</TargetFramework>
+    <TargetFramework>netcoreapp3.0</TargetFramework>
 
     <IsPackable>false</IsPackable>
 
-    <LangVersion>latest</LangVersion>
+    <LangVersion>preview</LangVersion>
 
     <ProjectGuid>{457ffd89-52ce-4996-8f59-2da9be4bfd2c}</ProjectGuid>
 
