@@ -2,7 +2,7 @@
 
     <PropertyGroup>
         <TargetFramework>netstandard2.0</TargetFramework>
-        <LangVersion>latest</LangVersion>
+        <LangVersion>preview</LangVersion>
         <ProjectGuid>{ef353fca-5533-4396-bc63-942428e0685a}</ProjectGuid>
     </PropertyGroup>
 
