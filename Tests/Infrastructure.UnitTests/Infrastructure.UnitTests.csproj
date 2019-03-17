@@ -8,6 +8,8 @@
     <LangVersion>latest</LangVersion>
 
     <ProjectGuid>{09328b44-86f6-4152-a9ec-13100f7e8a59}</ProjectGuid>
+
+    <Platforms>AnyCPU;x64</Platforms>
   </PropertyGroup>
 
   <ItemGroup>
