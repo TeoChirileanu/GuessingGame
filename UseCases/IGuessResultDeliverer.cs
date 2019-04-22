@@ -1,7 +1,7 @@
 ﻿using System.Threading.Tasks;
 
 namespace GuessingGame.UseCases {
-    public interface IDeliverer {
+    public interface INumberDeliverer {
         Task Deliver(string guessResult);
     }
 }
