@@ -19,6 +19,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\..\Infrastructure\GuessingGame.Infrastructure.csproj" />
     <ProjectReference Include="..\..\UseCases\GuessingGame.UseCases.csproj" />
   </ItemGroup>
 
