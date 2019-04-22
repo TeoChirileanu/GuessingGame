@@ -4,7 +4,7 @@ using GuessingGame.Common;
 using GuessingGame.UseCases;
 
 namespace GuessingGame.Infrastructure {
-    public class StdinGuessedNumberGetter : IGuessedNumberGetter {
+    public class StdinNumberGetter : INumberGetter {
         public async Task<int?> GetGuessedNumber() {
             bool parsedSuccessfully;
             int parsedNumber;
