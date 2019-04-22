@@ -3,7 +3,7 @@ using GuessingGame.UseCases;
 
 namespace GuessingGame.Infrastructure
 {
-    public class FacadeFactory
+    public static class FacadeFactory
     {
         private static readonly INumberGetter NumberGetter = new StdinNumberGetter();
         private static readonly INumberChecker NumberChecker = new NumberChecker();
