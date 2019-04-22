@@ -2,6 +2,6 @@
 
 namespace GuessingGame.UseCases {
     public interface IDeliverer {
-        Task Deliver(string message);
+        Task Deliver(string guessResult);
     }
 }

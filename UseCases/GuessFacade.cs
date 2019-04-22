@@ -12,7 +12,7 @@ namespace GuessingGame.UseCases {
 
         public async Task<int> GetGuessedNumber() {
             if (GuessedNumberGetter is null)
-                throw new Exception(Resources.NoGetterProvided);
+                throw new ArgumentNullException(Resources.NoGetterProvided);
             int? number;
             var numberHasValue = false;
             do {
@@ -24,26 +24,26 @@ namespace GuessingGame.UseCases {
         }
 
         public async Task<string> CheckGuessedNumber(int guessedNumber) {
-            if (Logger is null) throw new Exception(Resources.NoLoggerProvided);
+            if (Logger is null) throw new ArgumentNullException(Resources.NoLoggerProvided);
+            if (NumberChecker is null)
+                throw new ArgumentNullException(Resources.NoNumberCheckerProvided);
 
-            if (NumberChecker is null) throw new Exception(Resources.NoNumberCheckerProvided);
-            var checkingNumberMessageFormat =
-                string.Format(Resources.CheckingNumberMessage, guessedNumber);
-            await Logger.Log(checkingNumberMessageFormat);
+            await Logger.Log(string.Format(Resources.CheckingNumberMessage, guessedNumber));
             var guessResult = await NumberChecker.CheckNumber(guessedNumber);
             await Logger.Log(guessResult);
             return guessResult;
         }
 
         public async Task DeliverGuessResult(string guessResult) {
-            if (Deliverer is null) throw new Exception(Resources.NoDelivererProvided);
+            if (Deliverer is null) throw new ArgumentNullException(Resources.NoDelivererProvided);
             var message = $"The result of your guess:\n{guessResult}\n";
             await Deliverer.Deliver(message);
         }
 
         public async Task DeliverLoggedGuesses() {
-            if (Logger is null) throw new Exception(Resources.NoLoggerProvided);
-            if (Deliverer is null) throw new Exception(Resources.NoDelivererProvided);
+            if (Logger is null) throw new ArgumentNullException(Resources.NoLoggerProvided);
+            if (Deliverer is null) throw new ArgumentNullException(Resources.NoDelivererProvided);
+
             var previousAttempts = await Logger.GetLoggedGuesses();
             var message = $"Here are your guesses so far:\n{previousAttempts}\n";
             await Deliverer.Deliver(message);

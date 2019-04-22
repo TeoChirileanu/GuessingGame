@@ -25,7 +25,7 @@ namespace GuessingGame.BusinessRules {
                     result = Resources.CorrectMessage;
                     break;
                 default:
-                    throw new ArgumentOutOfRangeException();
+                    throw new ArgumentOutOfRangeException(nameof(comparisonResult));
             }
 
             return await Task.FromResult(result);
