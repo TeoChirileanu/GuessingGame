@@ -5,30 +5,27 @@ using GuessingGame.UseCases;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using NSubstitute;
 
-namespace UseCases.BehaviorTests {
+namespace UseCases.BehaviorTests
+{
     [TestClass]
-    public class GuessFacadeTests {
-        private static readonly IGuessedNumberGetter FakeGuessedNumberGetter =
-            Substitute.For<IGuessedNumberGetter>();
-
-        private static readonly INumberChecker FakeNumberChecker =
-            Substitute.For<INumberChecker>();
-
-        private static readonly IDeliverer FakeGuessResultDeliverer =
-            Substitute.For<IDeliverer>();
-
-        private static readonly ILogger FakeLogger =
-            Substitute.For<ILogger>();
+    public class GuessFacadeTests
+    {
+        private readonly INumberChecker _checker = Substitute.For<INumberChecker>();
+        private readonly INumberDeliverer _deliverer = Substitute.For<INumberDeliverer>();
+        private readonly INumberGetter _getter = Substitute.For<INumberGetter>();
+        private readonly ILogger _logger = Substitute.For<ILogger>();
 
         [TestMethod]
-        public async Task ShouldCallAppropriateCollaborators() {
+        public async Task ShouldCallAppropriateCollaborators()
+        {
             // Arrange
-            FakeGuessedNumberGetter.GetGuessedNumber().Returns(Resources.CorrectNumber);
-            IGuessFacade fakeGuessFacade = new GuessFacade {
-                GuessedNumberGetter = FakeGuessedNumberGetter,
-                Deliverer = FakeGuessResultDeliverer,
-                Logger = FakeLogger,
-                NumberChecker = FakeNumberChecker
+            _getter.GetGuessedNumber().Returns(Resources.CorrectNumber);
+            IGuessFacade fakeGuessFacade = new GuessFacade
+            {
+                NumberGetter = _getter,
+                NumberChecker = _checker,
+                NumberDeliverer = _deliverer,
+                Logger = _logger
             };
 
             // Act
@@ -38,12 +35,12 @@ namespace UseCases.BehaviorTests {
             await fakeGuessFacade.DeliverLoggedGuesses();
 
             // Assert
-            await FakeGuessedNumberGetter.Received().GetGuessedNumber();
-            await FakeNumberChecker.Received().CheckNumber(Arg.Any<int>());
-            await FakeGuessResultDeliverer.Received().Deliver(Arg.Any<string>());
-            await FakeLogger.Received().Log(Arg.Any<string>());
-            await FakeLogger.Received().GetLoggedGuesses();
-            await FakeLogger.Received().ClearLog();
+            await _getter.Received().GetGuessedNumber();
+            await _checker.Received().CheckNumber(Arg.Any<int>());
+            await _deliverer.Received().Deliver(Arg.Any<string>());
+            await _logger.Received().Log(Arg.Any<string>());
+            await _logger.Received().GetLoggedGuesses();
+            await _logger.Received().ClearLog();
         }
     }
 }

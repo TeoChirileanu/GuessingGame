@@ -6,24 +6,18 @@ namespace GuessingGame.Common {
         public const int UpperBound = 100;
         public const int CorrectNumber = 50;
 
-        public static readonly string TooLowMessage = "Too Low!";
-        public static readonly string TooHighMessage = "Too High!";
-        public static readonly string CorrectMessage = "Correct!";
-        public static readonly string CheckingNumberMessage = "Checking {0}...";
+        public const string TooLowMessage = "Too Low!";
+        public const string TooHighMessage = "Too High!";
+        public const string CorrectMessage = "Correct!";
+        public const string CheckingNumberMessage = "Checking {0}...";
 
-        public static readonly string InvalidNumberMessage = "That is not a valid number!";
+        public const string InvalidNumberMessage = "That is not a valid number!";
 
         public static readonly string NumberOutOfBoundsMessage =
             $"Number is out of range. It should be between {LowerBound} and {UpperBound}";
 
         public static readonly string AskUserForNumberMessage =
             $"Please enter a number between {LowerBound} and {UpperBound}";
-
-        public static readonly string NoGetterProvided = "No Guessed Number Getter Provided!";
-
-        public static readonly string NoLoggerProvided = "No Logger Provided!";
-        public static readonly string NoNumberCheckerProvided = "No Number Checker Provided!";
-        public static readonly string NoDelivererProvided = "No Deliverer Provided!";
 
         public static int GetRandomNumber() => new Random().Next(LowerBound, UpperBound);
     }
